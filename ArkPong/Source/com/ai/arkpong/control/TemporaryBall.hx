@@ -1,14 +1,15 @@
 ﻿package com.ai.arkpong.control;
+
 import com.ai.arkpong.view.Explode;
 import haxe.ui.toolkit.controls.Button;
-import flash.display.*;
-import flash.events.*;
-import flash.display.Graphics;
-import flash.display.Shape;
-import fl.controls.Label;
-import flash.utils.Timer;
-import fl.controls.Button;
-import flash.ui.Mouse;
+import openfl.display.*;
+import openfl.events.*;
+import openfl.display.Graphics;
+import openfl.display.Shape;
+import haxe.ui.toolkit.controls.Text;
+import openfl.utils.Timer;
+import haxe.ui.toolkit.controls.Button;
+import openfl.ui.Mouse;
 import org.flintparticles.common.counters.TimePeriod;
 
 class TemporaryBall extends Ball{
@@ -23,7 +24,7 @@ class TemporaryBall extends Ball{
 	var rightWallHit2:Int=0;//monitors hits in-a-row on right wall
 	var topHit2:Int=0;//monitors hits in-a-row on ceiling
 	var bottomHit2:Int=0;//monitors hits in-a-row on floor [probably not needed]
-	var theBackground:MovieClip=new myBackground();
+	//var theBackground:MovieClip=new myBackground();
 	var ex:Explode;
 	var power:Power;
 	var trackLvl:Int;
@@ -61,7 +62,7 @@ class TemporaryBall extends Ball{
 		this.evilPaddle=ePaddle;
 		this.theStage=stageRef;
 		this.evilSight=eSight;
-		this.ballRef=ballR;
+		//this.ballRef=ballR;
 		this.mainRef=mainR;
 		countHit=0;
 		//addEventListener(Event.ENTER_FRAME, screamlikeabitch);
@@ -80,7 +81,7 @@ class TemporaryBall extends Ball{
 		
 	}
 	public function checkGC(e:Event){
-		trace("ball2 still exists at " + date.getMilliseconds());
+		trace("ball2 still exists at " + this.date.getTime());
 		trace("" + this.name);
 	}
 	public function screamlikeabitch(e:Event){
@@ -110,7 +111,7 @@ class TemporaryBall extends Ball{
 	
 	public function ballMotion2(event:Event){ 
 	//trace("Number " + mainRef.ball2Counter + " ball2 exists!");//"for " system.gettime-creationTime " milliseconds" 
-		if(ballRef.doomCount==1){
+		if(myBall.doomCount==1){
 			//mainRef.splitTimer.dispatchEvent(ArkPongMain TimerEvent(TimerEvent.TIMER_COMPLETE));
 			splitTimer.dispatchEvent(new TimerEvent(TimerEvent.TIMER_COMPLETE));
 			
@@ -187,13 +188,13 @@ class TemporaryBall extends Ball{
 			bottomHit2 +=1;
 			topHit2=0;
 			if(noHurt==0){
-			ballRef.enemyScore +=1;
-			//addChild(eScore);
-			callParts=new CallParts((this.x +(this.width/2)),450);
-			ballRef.addChild(callParts);
-			ballRef.eScore.text="ENEMY SCORE:" + ballRef.enemyScore;
-				if(ballRef.enemyScore>=10){
-					ballRef.enemyWin();
+			    myBall.enemyScore +=1;
+			    //addChild(eScore);
+			    callParts=new CallParts((this.x +(this.width/2)),450);
+                myBall.addChild(callParts);
+                myBall.eScore.text="ENEMY SCORE:" + myBall.enemyScore;
+				if(myBall.enemyScore>=10){
+                    myBall.enemyWin();
 					
 				}
 			}
@@ -215,12 +216,12 @@ class TemporaryBall extends Ball{
 			bottomHit2=0;
 			//addChild(score);
 			if(noHurt==0){
-			ballRef.playerScore +=1;
-			callParts=new CallParts((this.x +(this.width/2)),50);
-			ballRef.addChild(callParts);
-			ballRef.score.text="PLAYER SCORE:" + ballRef.playerScore;
-				if(ballRef.playerScore>=10){
-					ballRef.playerWin();
+                myBall.playerScore +=1;
+			    callParts=new CallParts((this.x +(this.width/2)),50);
+                myBall.addChild(callParts);
+                myBall.score.text="PLAYER SCORE:" + myBall.playerScore;
+				if(myBall.playerScore>=10){
+                    myBall.playerWin();
 					
 				}
 			}
@@ -347,7 +348,7 @@ class TemporaryBall extends Ball{
 		splitTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, startEndBall2);
 		//removeEventListener(Event.ENTER_FRAME, checkGC)
 		//this.parent.removeChild(this);
-		mainRef.killBall2();
+		mainRef.killTemporaryBall();
 		
 		//myBall2==null;
 	}

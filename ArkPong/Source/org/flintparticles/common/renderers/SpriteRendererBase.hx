@@ -27,16 +27,16 @@
  * THE SOFTWARE.
  */
 
-package org.flintparticles.common.renderers 
-{
+package org.flintparticles.common.renderers;
+
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.events.EmitterEvent;
 import org.flintparticles.common.events.ParticleEvent;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.renderers.Renderer;
 
-import flash.display.Sprite;
-import flash.events.Event;	
+import openfl.display.Sprite;
+import openfl.events.Event;
 
 /**
  * The base class used by all the Flint renderers. This class manages
@@ -89,7 +89,7 @@ class SpriteRendererBase extends Sprite implements Renderer
 		emitter.addEventListener(ParticleEvent.PARTICLE_CREATED, particleAdded, false, 0, true);
 		emitter.addEventListener(ParticleEvent.PARTICLE_ADDED, particleAdded, false, 0, true);
 		emitter.addEventListener(ParticleEvent.PARTICLE_DEAD, particleRemoved, false, 0, true);
-		for(var p:Particle in emitter.particles)
+		for(p in emitter.particles)
 		{
 			addParticle(p);
 		}
@@ -108,7 +108,7 @@ class SpriteRendererBase extends Sprite implements Renderer
 	 */
 	public function removeEmitter(emitter:Emitter):Void
 	{
-		for(i in 0..._emitters.lengthi)
+		for(i in 0..._emitters.length)
 		{
 			if(_emitters[i]==emitter)
 			{
@@ -117,7 +117,7 @@ class SpriteRendererBase extends Sprite implements Renderer
 				emitter.removeEventListener(ParticleEvent.PARTICLE_CREATED, particleAdded);
 				emitter.removeEventListener(ParticleEvent.PARTICLE_ADDED, particleAdded);
 				emitter.removeEventListener(ParticleEvent.PARTICLE_DEAD, particleRemoved);
-				for(var p:Particle in emitter.particles)
+				for(p in emitter.particles)
 				{
 					removeParticle(p);
 				}
@@ -172,7 +172,7 @@ class SpriteRendererBase extends Sprite implements Renderer
 	private function updateParticles(ev:Event):Void
 	{
 		var particles:Array<Dynamic>=new Array();
-		for(i in 0..._emitters.lengthi)
+		for(i in 0..._emitters.length)
 		{
 			particles=particles.concat(Emitter(_emitters[i]).particles);
 		}

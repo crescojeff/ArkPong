@@ -28,8 +28,8 @@
  * THE SOFTWARE.
  */
 
-package org.flintparticles.common.renderers 
-{
+package org.flintparticles.common.renderers;
+
 import org.flintparticles.common.emitters.Emitter;					
 
 /**

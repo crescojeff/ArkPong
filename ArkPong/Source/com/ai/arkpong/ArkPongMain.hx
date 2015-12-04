@@ -134,16 +134,56 @@ class ArkPongMain extends MovieClip{
 	var invisiBrick:InvisiBrick;
 
     //power abilities in the UI
-    var abilityFire_Player:Button;
-    var abilityNinjaStar_Player:Button;
-    var abilityFreeze_Player:Button;
-    var abilityPunchThrough_Player:Button;
-    var abilitySplit_Player:Button;
-    var abilityFire_Enemy:Button;
-    var abilityNinjaStar_Enemy:Button;
-    var abilityFreeze_Enemy:Button;
-    var abilityPunchThrough_Enemy:Button;
-    var abilitySplit_Enemy:Button;
+    @:isVar var abilityFire_Player(get, null):Button;
+    @:isVar var abilityNinjaStar_Player(get, null):Button;
+    @:isVar var abilityFreeze_Player(get, null):Button;
+    @:isVar var abilityPunchThrough_Player(get, null):Button;
+    @:isVar var abilitySplit_Player(get, null):Button;
+    @:isVar var abilityFire_Enemy(get, null):Button;
+    @:isVar var abilityNinjaStar_Enemy(get, null):Button;
+    @:isVar var abilityFreeze_Enemy(get, null):Button;
+    @:isVar var abilityPunchThrough_Enemy(get, null):Button;
+    @:isVar var abilitySplit_Enemy:Button;
+
+    public function get_abilityFire_Player():Button {
+        return abilityFire_Player;
+    }
+
+    public function get_abilityNinjaStar_Player():Button {
+        return abilityNinjaStar_Player;
+    }
+
+    public function get_abilityFreeze_Player():Button {
+        return abilityFreeze_Player;
+    }
+
+    public function get_abilityPunchThrough_Player():Button {
+        return abilityPunchThrough_Player;
+    }
+
+    public function get_abilitySplit_Player():Button {
+        return abilitySplit_Player;
+    }
+    public function get_abilitySplit_Enemy():Button {
+        return abilitySplit_Enemy;
+    }
+
+    public function get_abilityFire_Enemy():Button {
+        return abilityFire_Enemy;
+    }
+
+    public function get_abilityNinjaStar_Enemy():Button {
+        return abilityNinjaStar_Enemy;
+    }
+
+    public function get_abilityFreeze_Enemy():Button {
+        return abilityFreeze_Enemy;
+    }
+
+    public function get_abilityPunchThrough_Enemy():Button {
+        return abilityPunchThrough_Enemy;
+    }
+
 
 
 	public function new(){

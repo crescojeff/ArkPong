@@ -33,13 +33,13 @@ package org.flintparticles.twoD.renderers;
 import org.flintparticles.common.renderers.SpriteRendererBase;
 import org.flintparticles.twoD.particles.Particle2D;
 
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.display.DisplayObject;
-import flash.filters.BitmapFilter;
-import flash.geom.Matrix;
-import flash.geom.Point;
-import flash.geom.Rectangle;	
+import openfl.display.Bitmap;
+import openfl.display.BitmapData;
+import openfl.display.DisplayObject;
+import openfl.filters.BitmapFilter;
+import openfl.geom.Matrix;
+import openfl.geom.Point;
+import openfl.geom.Rectangle;	
 
 /**
  * The BitmapRenderer draws particles onto a single Bitmap display object. The
@@ -68,7 +68,7 @@ import flash.geom.Rectangle;
  */
 class BitmapRenderer extends SpriteRendererBase
 {
-	protected static var ZERO_POINT:Point=new Point(0, 0);
+	static var ZERO_POINT:Point=new Point(0, 0);
 	
 	/**
 	 * @private
@@ -161,7 +161,7 @@ class BitmapRenderer extends SpriteRendererBase
 	 */
 	public function removeFilter(filter:BitmapFilter):Void
 	{
-		for(i in 0..._preFilters.lengthi)
+		for(i in 0..._preFilters.length)
 		{
 			if(_preFilters[i]==filter)
 			{
@@ -169,7 +169,7 @@ class BitmapRenderer extends SpriteRendererBase
 				return;
 			}
 		}
-		for(i=0;i<_postFilters.length;++i)
+		for(i in 0..._postFilters.length)
 		{
 			if(_postFilters[i]==filter)
 			{
@@ -330,7 +330,7 @@ class BitmapRenderer extends SpriteRendererBase
 		var len:Int;
 		_bitmapData.lock();
 		len=_preFilters.length;
-		for(i=0;i<len;++i)
+		for(i in 0...len)
 		{
 			_bitmapData.applyFilter(_bitmapData, _bitmapData.rect, BitmapRenderer.ZERO_POINT, _preFilters[i]);
 		}
@@ -341,13 +341,13 @@ class BitmapRenderer extends SpriteRendererBase
 		len=particles.length;
 		if(len)
 		{
-			for(i=len;i--;)// draw ArkPongMain particles first so they are behind old particles
+			for(i in len...0)// draw ArkPongMain particles first so they are behind old particles
 			{
 				drawParticle(particles[i]);
 			}
 		}
 		len=_postFilters.length;
-		for(i=0;i<len;++i)
+		for(i in 0...len)
 		{
 			_bitmapData.applyFilter(_bitmapData, _bitmapData.rect, BitmapRenderer.ZERO_POINT, _postFilters[i]);
 		}

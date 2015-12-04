@@ -113,21 +113,19 @@ emitter2.addInitializer(new PooledImageClass2D(pool, RadialDot));
 
 package;
 
-   import org.flintparticles.twoD.emitters.Emitter2D;
+import org.flintparticles.twoD.emitters.Emitter2D;
   import org.flintparticles.twoD.renderers.BitmapRenderer;
 
-  import flash.display.Sprite;
-  import flash.filters.BlurFilter;
-  import flash.filters.ColorMatrixFilter;
-  import flash.geom.Rectangle;
-  import flash.events.TimerEvent;
-  import flash.utils.Timer;
+  import openfl.display.Sprite;
+  import openfl.filters.BlurFilter;
+  import openfl.filters.ColorMatrixFilter;
+  import openfl.geom.Rectangle;
+  import openfl.events.TimerEvent;
+  import openfl.utils.Timer;
 
 
 
 
-  ////[SWF(width='400', height='400', frameRate='61', backgroundColor='#000000')]
-  
   class CallParts extends Sprite
   {
 private var emitter:Emitter2D;

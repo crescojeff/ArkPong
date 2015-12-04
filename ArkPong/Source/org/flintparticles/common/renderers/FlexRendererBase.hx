@@ -27,17 +27,18 @@
  * THE SOFTWARE.
  */
 
-package org.flintparticles.common.renderers 
-{
+package org.flintparticles.common.renderers;
+
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.events.EmitterEvent;
 import org.flintparticles.common.events.ParticleEvent;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.renderers.Renderer;
 
-import mx.core.UIComponent;
+//import mx.core.UIComponent;
+	import haxe.ui.toolkit.core.Component;
 
-import flash.events.Event;	
+import openfl.events.Event;
 
 /**
  * The base class used by all the Flex compatible renderers. This class manages
@@ -49,7 +50,7 @@ import flash.events.Event;
  * and renderParticles at the appropriate times. Many derived classes need 
  * only implement these three methods to manage the rendering of the particles.</p>
  */
-class FlexRendererBase extends UIComponent implements Renderer 
+class FlexRendererBase extends Component implements Renderer
 {
 	/**
 	 * @private

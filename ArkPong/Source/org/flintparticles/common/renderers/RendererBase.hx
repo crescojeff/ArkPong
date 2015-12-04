@@ -27,8 +27,8 @@
  * THE SOFTWARE.
  */
 
-package org.flintparticles.common.renderers 
-{
+package org.flintparticles.common.renderers;
+
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.events.EmitterEvent;
 import org.flintparticles.common.events.ParticleEvent;
@@ -79,9 +79,9 @@ class RendererBase implements Renderer
 		emitter.addEventListener(ParticleEvent.PARTICLE_CREATED, particleAdded, false, 0, true);
 		emitter.addEventListener(ParticleEvent.PARTICLE_ADDED, particleAdded, false, 0, true);
 		emitter.addEventListener(ParticleEvent.PARTICLE_DEAD, particleRemoved, false, 0, true);
-		for(var p:Particle in emitter.particles)
+		for(particle in emitter.particles)
 		{
-			addParticle(p);
+			addParticle(particle);
 		}
 	}
 
@@ -94,7 +94,7 @@ class RendererBase implements Renderer
 	 */
 	public function removeEmitter(emitter:Emitter):Void
 	{
-		for(i in 0..._emitters.lengthi)
+		for(i in 0..._emitters.length)
 		{
 			if(_emitters[i]==emitter)
 			{
@@ -103,9 +103,9 @@ class RendererBase implements Renderer
 				emitter.removeEventListener(ParticleEvent.PARTICLE_CREATED, particleAdded);
 				emitter.removeEventListener(ParticleEvent.PARTICLE_ADDED, particleAdded);
 				emitter.removeEventListener(ParticleEvent.PARTICLE_DEAD, particleRemoved);
-				for(var p:Particle in emitter.particles)
+				for(particle in emitter.particles)
 				{
-					removeParticle(p);
+					removeParticle(particle);
 				}
 				return;
 			}

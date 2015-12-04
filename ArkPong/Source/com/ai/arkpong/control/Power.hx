@@ -256,30 +256,30 @@ class Power extends MovieClip {
 				//provided mainRef.playerPowerCount is<=2.
 			if(mainRef.playerPowerCount<2 && mainRef.power !="gold"){
 				//mainRef.playerPowerCount++;
-				trace("alpha:" + mainRef.playerFire.alpha);
+				trace("alpha:" + mainRef.get_abilityFire_Player().alpha);
 				trace("pPC:" + mainRef.playerPowerCount);
-				if(mainRef.power=="fire" && mainRef.playerFire.alpha<1){
-					mainRef.playerFire.alpha=1;
+				if(mainRef.power=="fire" && mainRef.get_abilityFire_Player().alpha<1){
+					mainRef.get_abilityFire_Player().alpha=1;
 					mainRef.playerPowerCount++;
 					trace("pPC:" + mainRef.playerPowerCount);
 				}
-				if(mainRef.power=="freeze" && mainRef.playerFreeze.alpha<1){
-					mainRef.playerFreeze.alpha=1;
+				if(mainRef.power=="freeze" && mainRef.get_abilityFreeze_Player().alpha<1){
+					mainRef.get_abilityFreeze_Player().alpha=1;
 					mainRef.playerPowerCount++;
 					trace("pPC:" + mainRef.playerPowerCount);
 				}
-				if(mainRef.power=="ninja" && mainRef.playerNinja.alpha<1){
-					mainRef.playerNinja.alpha=1;
+				if(mainRef.power=="ninja" && mainRef.get_abilityNinjaStar_Player().alpha<1){
+					mainRef.get_abilityNinjaStar_Player().alpha=1;
 					mainRef.playerPowerCount++;
 					trace("pPC:" + mainRef.playerPowerCount);
 				}
-				if(mainRef.power=="punch" && mainRef.playerPunch.alpha<1){
-					mainRef.playerPunch.alpha=1;
+				if(mainRef.power=="punch" && mainRef.get_abilityPunchThrough_Player().alpha<1){
+					mainRef.get_abilityPunchThrough_Player().alpha=1;
 					mainRef.playerPowerCount++;
 					trace("pPC:" + mainRef.playerPowerCount);
 				}
-				if(mainRef.power=="split" && mainRef.playerSplit.alpha<1){
-					mainRef.playerSplit.alpha=1;
+				if(mainRef.power=="split" && mainRef.get_abilitySplit_Player().alpha<1){
+					mainRef.get_abilitySplit_Player().alpha=1;
 					mainRef.playerPowerCount++;
 					trace("pPC:" + mainRef.playerPowerCount);
 				}
@@ -323,30 +323,30 @@ class Power extends MovieClip {
 				//provided mainRef.enemyPowerCount is<=2.
 			if(mainRef.enemyPowerCount<2 && mainRef.power !="gold"){
 				//mainRef.playerPowerCount++;
-				trace("alpha:" + mainRef.evilFire.alpha);
+				trace("alpha:" + mainRef.get_abilityFire_Enemy().alpha);
 				trace("pPC:" + mainRef.enemyPowerCount);
-				if(mainRef.power=="fire" && mainRef.evilFire.alpha<1){
-					mainRef.evilFire.alpha=1;
+				if(mainRef.power=="fire" && mainRef.get_abilityFire_Enemy().alpha<1){
+					mainRef.get_abilityFire_Enemy().alpha=1;
 					mainRef.enemyPowerCount++;
 					trace("pPC:" + mainRef.enemyPowerCount);
 				}
-				if(mainRef.power=="freeze" && mainRef.evilFreeze.alpha<1){
-					mainRef.evilFreeze.alpha=1;
+				if(mainRef.power=="freeze" && mainRef.get_abilityFreeze_Enemy().alpha<1){
+					mainRef.get_abilityFreeze_Enemy().alpha=1;
 					mainRef.enemyPowerCount++;
 					trace("pPC:" + mainRef.enemyPowerCount);
 				}
-				if(mainRef.power=="ninja" && mainRef.evilNinja.alpha<1){
-					mainRef.evilNinja.alpha=1;
+				if(mainRef.power=="ninja" && mainRef.get_abilityNinjaStar_Enemy().alpha<1){
+					mainRef.get_abilityNinjaStar_Enemy().alpha=1;
 					mainRef.enemyPowerCount++;
 					trace("pPC:" + mainRef.enemyPowerCount);
 				}
-				if(mainRef.power=="punch" && mainRef.evilPunch.alpha<1){
-					mainRef.evilPunch.alpha=1;
+				if(mainRef.power=="punch" && mainRef.get_abilityPunchThrough_Enemy().alpha<1){
+					mainRef.get_abilityPunchThrough_Enemy().alpha=1;
 					mainRef.enemyPowerCount++;
 					trace("pPC:" + mainRef.enemyPowerCount);
 				}
-				if(mainRef.power=="split" && mainRef.evilSplit.alpha<1){
-					mainRef.evilSplit.alpha=1;
+				if(mainRef.power=="split" && mainRef.get_abilitySplit_Enemy().alpha<1){
+					mainRef.get_abilitySplit_Enemy().alpha=1;
 					mainRef.enemyPowerCount++;
 					trace("pPC:" + mainRef.enemyPowerCount);
 				}
