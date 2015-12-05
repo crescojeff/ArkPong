@@ -19,8 +19,8 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.polygonal.core 
-{
+package de.polygonal.core;
+
 class DynamicPool
 {
 	private var _factory:DynamicPoolFactory;
@@ -68,7 +68,7 @@ class DynamicPool
 	/**
 	 * The pool size.
 	 */
-	public var size(get_size, set_size):Int;
+
  	private function get_size():Int
 	{
 		return _currSize;
@@ -77,7 +77,7 @@ class DynamicPool
 	/**
 	 * The total number of 'checked out' objects currently in use.
 	 */
-	public var usageCount(get_usageCount, set_usageCount):Int;
+
  	private function get_usageCount():Int
 	{
 		return _usageCount;
@@ -89,7 +89,7 @@ class DynamicPool
 	 * 
 	 * @see #purge
 	 */
-	public var wasteCount(get_wasteCount, set_wasteCount):Int;
+
  	private function get_wasteCount():Int
 	{
 		return _currSize - _usageCount;	
@@ -99,7 +99,7 @@ class DynamicPool
 	 * Get the next available object from the pool or put it back for the
 	 * next use. If the pool is empty and resizable, an error is thrown.
 	 */
-	public var object(get_object, set_object):Dynamic;
+
  	private function get_object():Dynamic
 	{
 		if(_usageCount==_currSize)
@@ -125,6 +125,7 @@ class DynamicPool
 				
 				_tail.next=_emptyNode=_head;
 				_allocNode=n.next;
+                var object:Dynamic=_allocNode.data;
 				return object;
 			}
  				else
@@ -253,7 +254,7 @@ class DynamicPool
 			node=_head;
 			while(node)
 			{
-				if(!node.data)a[int(i++)]=node;
+				if(!node.data)a[cast(i++,Int)]=node;
 				if(node==_tail)break;
 				node=node.next;	
 			}
@@ -262,7 +263,7 @@ class DynamicPool
 			_usageCount=_currSize;
 			
 			_head=_tail=a[0];
-			for(i=1;i<_currSize;i++)
+			for(i in 0..._currSize)
 			{
 				node=a[i];
 				node.next=_head;
@@ -279,7 +280,7 @@ class DynamicPool
 				var n:ObjNode=_tail;
 				var t:ObjNode=_tail;
 				var k:Int=_initSize - _usageCount;
-				for(i=0;i<k;i++)
+				for(i in 0...k)
 				{
 					node=new ObjNode();
 					node.data=_factory.create();
@@ -297,9 +298,9 @@ class DynamicPool
 		}
 	}
 }
-}
 
-internal class ObjNode
+
+class ObjNode
 {
 public var next:ObjNode;
 
@@ -308,7 +309,7 @@ public var data:Dynamic;
 
 import de.polygonal.core.ObjectPoolFactory;
 
-internal class SimpleFactory implements DynamicPoolFactory
+class SimpleFactory implements DynamicPoolFactory
 {
 private var _class:Class;
 
@@ -320,4 +321,5 @@ public function SimpleFactory(C:Class)
 public function create():Dynamic
 {
 	return new _class();
+}
 }
