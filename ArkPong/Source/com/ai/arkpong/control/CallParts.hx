@@ -110,7 +110,7 @@ emitter2.addInitializer(new PooledImageClass2D(pool, RadialDot));
 
 */
 
-
+/*//TODO: uncomment when particle engine, either flint's or something from OpenFL, is added back
 package;
 
 import org.flintparticles.twoD.emitters.Emitter2D;
@@ -159,3 +159,4 @@ public function dieParts(event:TimerEvent){
 		this.parent.removeChild(this);
 	}
   }
+*/

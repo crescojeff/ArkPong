@@ -73,7 +73,7 @@ class Paddle extends ArkPongMovieClip {
 	}
 	
 	public function paddleMotion(event:Event){
-		myPaddle.x=(mouseX -(myPaddle.width/2))
+		myPaddle.x=(mouseX -(myPaddle.width/2));
 		
 		//If the mouse goes off too far to the left
 		if(mouseX<myPaddle.width / 2){

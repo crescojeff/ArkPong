@@ -299,27 +299,3 @@ class DynamicPool
 	}
 }
 
-
-class ObjNode
-{
-public var next:ObjNode;
-
-public var data:Dynamic;
-}
-
-import de.polygonal.core.ObjectPoolFactory;
-
-class SimpleFactory implements DynamicPoolFactory
-{
-private var _class:Class;
-
-public function SimpleFactory(C:Class)
-{
-	_class=C;
-}
-
-public function create():Dynamic
-{
-	return new _class();
-}
-}

@@ -34,6 +34,314 @@ class ApplicationMain {
 		var types = [];
 		
 		
+		urls.push ("styles/default/circle.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/default/collapse.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/default/cross.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/default/expand.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/default/up_down.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_down.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_down_dark.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_down_disabled.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_left.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_left_disabled.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_right.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_right2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_right_dark.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_right_disabled.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_up.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/arrow_up_disabled.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/circle_dark.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/cross_dark.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/cross_dark_disabled.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/cross_light_small.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/gradient.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/gradient/gradient.min.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/gradient/gradient_mobile.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/gradient/gradient_mobile.min.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/gradient/gripper_horizontal.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/gripper_horizontal_disabled.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/gripper_vertical.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/gripper_vertical_disabled.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/hsplitter_gripper.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/gradient/vsplitter_gripper.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/accordion.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/accordion.min.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/button.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/buttons.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/buttons.min.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/calendar.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/checkbox.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/container.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/glyphs/down_arrow.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/glyphs/hscroll_thumb_gripper_down.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/glyphs/hscroll_thumb_gripper_over.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/glyphs/hscroll_thumb_gripper_up.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/glyphs/left_arrow.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/glyphs/right_arrow.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/glyphs/up_arrow.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/glyphs/vscroll_thumb_gripper_down.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/glyphs/vscroll_thumb_gripper_over.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/glyphs/vscroll_thumb_gripper_up.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/hprogress.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/hscroll.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/listview.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/listview.min.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/listview.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/menus.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/optionbox.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/popup.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/popups.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/rtf.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/scrolls.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/scrolls.min.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/sliders.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/tab.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/tabs.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("styles/windows/textinput.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/vprogress.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/vscroll.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("styles/windows/windows.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("fonts/Oxygen-Bold.eot");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("fonts/Oxygen-Bold.svg");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("Oxygen Bold");
+		types.push (lime.Assets.AssetType.FONT);
+		
+		
+		urls.push ("fonts/Oxygen-Bold.woff");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("fonts/Oxygen-Bold.woff2");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("fonts/Oxygen.eot");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("fonts/Oxygen.svg");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("Oxygen Regular");
+		types.push (lime.Assets.AssetType.FONT);
+		
+		
+		urls.push ("fonts/Oxygen.woff");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("fonts/Oxygen.woff2");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/Ball.bmp");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -59,10 +367,6 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/bluebrick.jpg");
-		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/boob3s4.jpg");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		

@@ -1,7 +1,7 @@
 package com.ai.arkpong.view;
 import flash.display.Sprite;
 
-import de.polygonal.core.ObjectPool;	
+import de.polygonal.core.DynamicPool;
 
 class Example extends Sprite
 {
@@ -69,7 +69,7 @@ public function init(...args):Void
 
 import flash.geom.Point;
 
-import de.polygonal.core.ObjectPoolFactory;
+import de.polygonal.core.DynamicPoolFactory;
 
 internal class MyFactory implements DynamicPoolFactory
 {

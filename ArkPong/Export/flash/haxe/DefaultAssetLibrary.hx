@@ -45,6 +45,160 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		className.set ("styles/default/circle.png", __ASSET__styles_default_circle_png);
+		type.set ("styles/default/circle.png", AssetType.IMAGE);
+		className.set ("styles/default/collapse.png", __ASSET__styles_default_collapse_png);
+		type.set ("styles/default/collapse.png", AssetType.IMAGE);
+		className.set ("styles/default/cross.png", __ASSET__styles_default_cross_png);
+		type.set ("styles/default/cross.png", AssetType.IMAGE);
+		className.set ("styles/default/expand.png", __ASSET__styles_default_expand_png);
+		type.set ("styles/default/expand.png", AssetType.IMAGE);
+		className.set ("styles/default/up_down.png", __ASSET__styles_default_up_down_png);
+		type.set ("styles/default/up_down.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_down.png", __ASSET__styles_gradient_arrow_down_png);
+		type.set ("styles/gradient/arrow_down.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_down_dark.png", __ASSET__styles_gradient_arrow_down_dark_png);
+		type.set ("styles/gradient/arrow_down_dark.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_down_disabled.png", __ASSET__styles_gradient_arrow_down_disabled_png);
+		type.set ("styles/gradient/arrow_down_disabled.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_left.png", __ASSET__styles_gradient_arrow_left_png);
+		type.set ("styles/gradient/arrow_left.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_left_disabled.png", __ASSET__styles_gradient_arrow_left_disabled_png);
+		type.set ("styles/gradient/arrow_left_disabled.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_right.png", __ASSET__styles_gradient_arrow_right_png);
+		type.set ("styles/gradient/arrow_right.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_right2.png", __ASSET__styles_gradient_arrow_right2_png);
+		type.set ("styles/gradient/arrow_right2.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_right_dark.png", __ASSET__styles_gradient_arrow_right_dark_png);
+		type.set ("styles/gradient/arrow_right_dark.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_right_disabled.png", __ASSET__styles_gradient_arrow_right_disabled_png);
+		type.set ("styles/gradient/arrow_right_disabled.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_up.png", __ASSET__styles_gradient_arrow_up_png);
+		type.set ("styles/gradient/arrow_up.png", AssetType.IMAGE);
+		className.set ("styles/gradient/arrow_up_disabled.png", __ASSET__styles_gradient_arrow_up_disabled_png);
+		type.set ("styles/gradient/arrow_up_disabled.png", AssetType.IMAGE);
+		className.set ("styles/gradient/circle_dark.png", __ASSET__styles_gradient_circle_dark_png);
+		type.set ("styles/gradient/circle_dark.png", AssetType.IMAGE);
+		className.set ("styles/gradient/cross_dark.png", __ASSET__styles_gradient_cross_dark_png);
+		type.set ("styles/gradient/cross_dark.png", AssetType.IMAGE);
+		className.set ("styles/gradient/cross_dark_disabled.png", __ASSET__styles_gradient_cross_dark_disabled_png);
+		type.set ("styles/gradient/cross_dark_disabled.png", AssetType.IMAGE);
+		className.set ("styles/gradient/cross_light_small.png", __ASSET__styles_gradient_cross_light_small_png);
+		type.set ("styles/gradient/cross_light_small.png", AssetType.IMAGE);
+		className.set ("styles/gradient/gradient.css", __ASSET__styles_gradient_gradient_css);
+		type.set ("styles/gradient/gradient.css", AssetType.TEXT);
+		className.set ("styles/gradient/gradient.min.css", __ASSET__styles_gradient_gradient_min_css);
+		type.set ("styles/gradient/gradient.min.css", AssetType.TEXT);
+		className.set ("styles/gradient/gradient_mobile.css", __ASSET__styles_gradient_gradient_mobile_css);
+		type.set ("styles/gradient/gradient_mobile.css", AssetType.TEXT);
+		className.set ("styles/gradient/gradient_mobile.min.css", __ASSET__styles_gradient_gradient_mobile_min_css);
+		type.set ("styles/gradient/gradient_mobile.min.css", AssetType.TEXT);
+		className.set ("styles/gradient/gripper_horizontal.png", __ASSET__styles_gradient_gripper_horizontal_png);
+		type.set ("styles/gradient/gripper_horizontal.png", AssetType.IMAGE);
+		className.set ("styles/gradient/gripper_horizontal_disabled.png", __ASSET__styles_gradient_gripper_horizontal_disabled_png);
+		type.set ("styles/gradient/gripper_horizontal_disabled.png", AssetType.IMAGE);
+		className.set ("styles/gradient/gripper_vertical.png", __ASSET__styles_gradient_gripper_vertical_png);
+		type.set ("styles/gradient/gripper_vertical.png", AssetType.IMAGE);
+		className.set ("styles/gradient/gripper_vertical_disabled.png", __ASSET__styles_gradient_gripper_vertical_disabled_png);
+		type.set ("styles/gradient/gripper_vertical_disabled.png", AssetType.IMAGE);
+		className.set ("styles/gradient/hsplitter_gripper.png", __ASSET__styles_gradient_hsplitter_gripper_png);
+		type.set ("styles/gradient/hsplitter_gripper.png", AssetType.IMAGE);
+		className.set ("styles/gradient/vsplitter_gripper.png", __ASSET__styles_gradient_vsplitter_gripper_png);
+		type.set ("styles/gradient/vsplitter_gripper.png", AssetType.IMAGE);
+		className.set ("styles/windows/accordion.css", __ASSET__styles_windows_accordion_css);
+		type.set ("styles/windows/accordion.css", AssetType.TEXT);
+		className.set ("styles/windows/accordion.min.css", __ASSET__styles_windows_accordion_min_css);
+		type.set ("styles/windows/accordion.min.css", AssetType.TEXT);
+		className.set ("styles/windows/button.png", __ASSET__styles_windows_button_png);
+		type.set ("styles/windows/button.png", AssetType.IMAGE);
+		className.set ("styles/windows/buttons.css", __ASSET__styles_windows_buttons_css);
+		type.set ("styles/windows/buttons.css", AssetType.TEXT);
+		className.set ("styles/windows/buttons.min.css", __ASSET__styles_windows_buttons_min_css);
+		type.set ("styles/windows/buttons.min.css", AssetType.TEXT);
+		className.set ("styles/windows/calendar.css", __ASSET__styles_windows_calendar_css);
+		type.set ("styles/windows/calendar.css", AssetType.TEXT);
+		className.set ("styles/windows/checkbox.png", __ASSET__styles_windows_checkbox_png);
+		type.set ("styles/windows/checkbox.png", AssetType.IMAGE);
+		className.set ("styles/windows/container.png", __ASSET__styles_windows_container_png);
+		type.set ("styles/windows/container.png", AssetType.IMAGE);
+		className.set ("styles/windows/glyphs/down_arrow.png", __ASSET__styles_windows_glyphs_down_arrow_png);
+		type.set ("styles/windows/glyphs/down_arrow.png", AssetType.IMAGE);
+		className.set ("styles/windows/glyphs/hscroll_thumb_gripper_down.png", __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_down_png);
+		type.set ("styles/windows/glyphs/hscroll_thumb_gripper_down.png", AssetType.IMAGE);
+		className.set ("styles/windows/glyphs/hscroll_thumb_gripper_over.png", __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_over_png);
+		type.set ("styles/windows/glyphs/hscroll_thumb_gripper_over.png", AssetType.IMAGE);
+		className.set ("styles/windows/glyphs/hscroll_thumb_gripper_up.png", __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_up_png);
+		type.set ("styles/windows/glyphs/hscroll_thumb_gripper_up.png", AssetType.IMAGE);
+		className.set ("styles/windows/glyphs/left_arrow.png", __ASSET__styles_windows_glyphs_left_arrow_png);
+		type.set ("styles/windows/glyphs/left_arrow.png", AssetType.IMAGE);
+		className.set ("styles/windows/glyphs/right_arrow.png", __ASSET__styles_windows_glyphs_right_arrow_png);
+		type.set ("styles/windows/glyphs/right_arrow.png", AssetType.IMAGE);
+		className.set ("styles/windows/glyphs/up_arrow.png", __ASSET__styles_windows_glyphs_up_arrow_png);
+		type.set ("styles/windows/glyphs/up_arrow.png", AssetType.IMAGE);
+		className.set ("styles/windows/glyphs/vscroll_thumb_gripper_down.png", __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_down_png);
+		type.set ("styles/windows/glyphs/vscroll_thumb_gripper_down.png", AssetType.IMAGE);
+		className.set ("styles/windows/glyphs/vscroll_thumb_gripper_over.png", __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_over_png);
+		type.set ("styles/windows/glyphs/vscroll_thumb_gripper_over.png", AssetType.IMAGE);
+		className.set ("styles/windows/glyphs/vscroll_thumb_gripper_up.png", __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_up_png);
+		type.set ("styles/windows/glyphs/vscroll_thumb_gripper_up.png", AssetType.IMAGE);
+		className.set ("styles/windows/hprogress.png", __ASSET__styles_windows_hprogress_png);
+		type.set ("styles/windows/hprogress.png", AssetType.IMAGE);
+		className.set ("styles/windows/hscroll.png", __ASSET__styles_windows_hscroll_png);
+		type.set ("styles/windows/hscroll.png", AssetType.IMAGE);
+		className.set ("styles/windows/listview.css", __ASSET__styles_windows_listview_css);
+		type.set ("styles/windows/listview.css", AssetType.TEXT);
+		className.set ("styles/windows/listview.min.css", __ASSET__styles_windows_listview_min_css);
+		type.set ("styles/windows/listview.min.css", AssetType.TEXT);
+		className.set ("styles/windows/listview.png", __ASSET__styles_windows_listview_png);
+		type.set ("styles/windows/listview.png", AssetType.IMAGE);
+		className.set ("styles/windows/menus.css", __ASSET__styles_windows_menus_css);
+		type.set ("styles/windows/menus.css", AssetType.TEXT);
+		className.set ("styles/windows/optionbox.png", __ASSET__styles_windows_optionbox_png);
+		type.set ("styles/windows/optionbox.png", AssetType.IMAGE);
+		className.set ("styles/windows/popup.png", __ASSET__styles_windows_popup_png);
+		type.set ("styles/windows/popup.png", AssetType.IMAGE);
+		className.set ("styles/windows/popups.css", __ASSET__styles_windows_popups_css);
+		type.set ("styles/windows/popups.css", AssetType.TEXT);
+		className.set ("styles/windows/rtf.css", __ASSET__styles_windows_rtf_css);
+		type.set ("styles/windows/rtf.css", AssetType.TEXT);
+		className.set ("styles/windows/scrolls.css", __ASSET__styles_windows_scrolls_css);
+		type.set ("styles/windows/scrolls.css", AssetType.TEXT);
+		className.set ("styles/windows/scrolls.min.css", __ASSET__styles_windows_scrolls_min_css);
+		type.set ("styles/windows/scrolls.min.css", AssetType.TEXT);
+		className.set ("styles/windows/sliders.css", __ASSET__styles_windows_sliders_css);
+		type.set ("styles/windows/sliders.css", AssetType.TEXT);
+		className.set ("styles/windows/tab.png", __ASSET__styles_windows_tab_png);
+		type.set ("styles/windows/tab.png", AssetType.IMAGE);
+		className.set ("styles/windows/tabs.css", __ASSET__styles_windows_tabs_css);
+		type.set ("styles/windows/tabs.css", AssetType.TEXT);
+		className.set ("styles/windows/textinput.png", __ASSET__styles_windows_textinput_png);
+		type.set ("styles/windows/textinput.png", AssetType.IMAGE);
+		className.set ("styles/windows/vprogress.png", __ASSET__styles_windows_vprogress_png);
+		type.set ("styles/windows/vprogress.png", AssetType.IMAGE);
+		className.set ("styles/windows/vscroll.png", __ASSET__styles_windows_vscroll_png);
+		type.set ("styles/windows/vscroll.png", AssetType.IMAGE);
+		className.set ("styles/windows/windows.css", __ASSET__styles_windows_windows_css);
+		type.set ("styles/windows/windows.css", AssetType.TEXT);
+		className.set ("fonts/Oxygen-Bold.eot", __ASSET__fonts_oxygen_bold_eot);
+		type.set ("fonts/Oxygen-Bold.eot", AssetType.BINARY);
+		className.set ("fonts/Oxygen-Bold.svg", __ASSET__fonts_oxygen_bold_svg);
+		type.set ("fonts/Oxygen-Bold.svg", AssetType.TEXT);
+		className.set ("fonts/Oxygen-Bold.ttf", __ASSET__fonts_oxygen_bold_ttf);
+		type.set ("fonts/Oxygen-Bold.ttf", AssetType.FONT);
+		className.set ("fonts/Oxygen-Bold.woff", __ASSET__fonts_oxygen_bold_woff);
+		type.set ("fonts/Oxygen-Bold.woff", AssetType.BINARY);
+		className.set ("fonts/Oxygen-Bold.woff2", __ASSET__fonts_oxygen_bold_woff2);
+		type.set ("fonts/Oxygen-Bold.woff2", AssetType.BINARY);
+		className.set ("fonts/Oxygen.eot", __ASSET__fonts_oxygen_eot);
+		type.set ("fonts/Oxygen.eot", AssetType.BINARY);
+		className.set ("fonts/Oxygen.svg", __ASSET__fonts_oxygen_svg);
+		type.set ("fonts/Oxygen.svg", AssetType.TEXT);
+		className.set ("fonts/Oxygen.ttf", __ASSET__fonts_oxygen_ttf);
+		type.set ("fonts/Oxygen.ttf", AssetType.FONT);
+		className.set ("fonts/Oxygen.woff", __ASSET__fonts_oxygen_woff);
+		type.set ("fonts/Oxygen.woff", AssetType.BINARY);
+		className.set ("fonts/Oxygen.woff2", __ASSET__fonts_oxygen_woff2);
+		type.set ("fonts/Oxygen.woff2", AssetType.BINARY);
 		className.set ("assets/Ball.bmp", __ASSET__assets_ball_bmp);
 		type.set ("assets/Ball.bmp", AssetType.TEXT);
 		className.set ("assets/Block1.bmp", __ASSET__assets_block1_bmp);
@@ -59,8 +213,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/blockbrick.jpg", AssetType.IMAGE);
 		className.set ("assets/bluebrick.jpg", __ASSET__assets_bluebrick_jpg);
 		type.set ("assets/bluebrick.jpg", AssetType.IMAGE);
-		className.set ("assets/boob3s4.jpg", __ASSET__assets_boob3s4_jpg);
-		type.set ("assets/boob3s4.jpg", AssetType.IMAGE);
 		className.set ("assets/bossSnort.png", __ASSET__assets_bosssnort_png);
 		type.set ("assets/bossSnort.png", AssetType.IMAGE);
 		className.set ("assets/Bouncer.bmp", __ASSET__assets_bouncer_bmp);
@@ -96,6 +248,314 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "styles/default/circle.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/default/collapse.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/default/cross.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/default/expand.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/default/up_down.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_down.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_down_dark.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_down_disabled.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_left.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_left_disabled.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_right.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_right2.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_right_dark.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_right_disabled.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_up.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/arrow_up_disabled.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/circle_dark.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/cross_dark.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/cross_dark_disabled.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/cross_light_small.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/gradient.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/gradient/gradient.min.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/gradient/gradient_mobile.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/gradient/gradient_mobile.min.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/gradient/gripper_horizontal.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/gripper_horizontal_disabled.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/gripper_vertical.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/gripper_vertical_disabled.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/hsplitter_gripper.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/gradient/vsplitter_gripper.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/accordion.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/accordion.min.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/button.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/buttons.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/buttons.min.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/calendar.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/checkbox.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/container.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/glyphs/down_arrow.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/glyphs/hscroll_thumb_gripper_down.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/glyphs/hscroll_thumb_gripper_over.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/glyphs/hscroll_thumb_gripper_up.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/glyphs/left_arrow.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/glyphs/right_arrow.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/glyphs/up_arrow.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/glyphs/vscroll_thumb_gripper_down.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/glyphs/vscroll_thumb_gripper_over.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/glyphs/vscroll_thumb_gripper_up.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/hprogress.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/hscroll.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/listview.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/listview.min.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/listview.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/menus.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/optionbox.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/popup.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/popups.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/rtf.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/scrolls.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/scrolls.min.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/sliders.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/tab.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/tabs.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/windows/textinput.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/vprogress.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/vscroll.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "styles/windows/windows.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "fonts/Oxygen-Bold.eot";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "fonts/Oxygen-Bold.svg";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "fonts/Oxygen-Bold.ttf";
+		className.set (id, __ASSET__fonts_oxygen_bold_ttf);
+		
+		type.set (id, AssetType.FONT);
+		id = "fonts/Oxygen-Bold.woff";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "fonts/Oxygen-Bold.woff2";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "fonts/Oxygen.eot";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "fonts/Oxygen.svg";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "fonts/Oxygen.ttf";
+		className.set (id, __ASSET__fonts_oxygen_ttf);
+		
+		type.set (id, AssetType.FONT);
+		id = "fonts/Oxygen.woff";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "fonts/Oxygen.woff2";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "assets/Ball.bmp";
 		path.set (id, id);
 		
@@ -121,10 +581,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/bluebrick.jpg";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
-		id = "assets/boob3s4.jpg";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -225,11 +681,318 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		openfl.text.Font.registerFont (__ASSET__OPENFL__fonts_oxygen_bold_ttf);
+		
+		
+		
+		
+		openfl.text.Font.registerFont (__ASSET__OPENFL__fonts_oxygen_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		
+		className.set ("styles/default/circle.png", __ASSET__styles_default_circle_png);
+		type.set ("styles/default/circle.png", AssetType.IMAGE);
+		
+		className.set ("styles/default/collapse.png", __ASSET__styles_default_collapse_png);
+		type.set ("styles/default/collapse.png", AssetType.IMAGE);
+		
+		className.set ("styles/default/cross.png", __ASSET__styles_default_cross_png);
+		type.set ("styles/default/cross.png", AssetType.IMAGE);
+		
+		className.set ("styles/default/expand.png", __ASSET__styles_default_expand_png);
+		type.set ("styles/default/expand.png", AssetType.IMAGE);
+		
+		className.set ("styles/default/up_down.png", __ASSET__styles_default_up_down_png);
+		type.set ("styles/default/up_down.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_down.png", __ASSET__styles_gradient_arrow_down_png);
+		type.set ("styles/gradient/arrow_down.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_down_dark.png", __ASSET__styles_gradient_arrow_down_dark_png);
+		type.set ("styles/gradient/arrow_down_dark.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_down_disabled.png", __ASSET__styles_gradient_arrow_down_disabled_png);
+		type.set ("styles/gradient/arrow_down_disabled.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_left.png", __ASSET__styles_gradient_arrow_left_png);
+		type.set ("styles/gradient/arrow_left.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_left_disabled.png", __ASSET__styles_gradient_arrow_left_disabled_png);
+		type.set ("styles/gradient/arrow_left_disabled.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_right.png", __ASSET__styles_gradient_arrow_right_png);
+		type.set ("styles/gradient/arrow_right.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_right2.png", __ASSET__styles_gradient_arrow_right2_png);
+		type.set ("styles/gradient/arrow_right2.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_right_dark.png", __ASSET__styles_gradient_arrow_right_dark_png);
+		type.set ("styles/gradient/arrow_right_dark.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_right_disabled.png", __ASSET__styles_gradient_arrow_right_disabled_png);
+		type.set ("styles/gradient/arrow_right_disabled.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_up.png", __ASSET__styles_gradient_arrow_up_png);
+		type.set ("styles/gradient/arrow_up.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/arrow_up_disabled.png", __ASSET__styles_gradient_arrow_up_disabled_png);
+		type.set ("styles/gradient/arrow_up_disabled.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/circle_dark.png", __ASSET__styles_gradient_circle_dark_png);
+		type.set ("styles/gradient/circle_dark.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/cross_dark.png", __ASSET__styles_gradient_cross_dark_png);
+		type.set ("styles/gradient/cross_dark.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/cross_dark_disabled.png", __ASSET__styles_gradient_cross_dark_disabled_png);
+		type.set ("styles/gradient/cross_dark_disabled.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/cross_light_small.png", __ASSET__styles_gradient_cross_light_small_png);
+		type.set ("styles/gradient/cross_light_small.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/gradient.css", __ASSET__styles_gradient_gradient_css);
+		type.set ("styles/gradient/gradient.css", AssetType.TEXT);
+		
+		className.set ("styles/gradient/gradient.min.css", __ASSET__styles_gradient_gradient_min_css);
+		type.set ("styles/gradient/gradient.min.css", AssetType.TEXT);
+		
+		className.set ("styles/gradient/gradient_mobile.css", __ASSET__styles_gradient_gradient_mobile_css);
+		type.set ("styles/gradient/gradient_mobile.css", AssetType.TEXT);
+		
+		className.set ("styles/gradient/gradient_mobile.min.css", __ASSET__styles_gradient_gradient_mobile_min_css);
+		type.set ("styles/gradient/gradient_mobile.min.css", AssetType.TEXT);
+		
+		className.set ("styles/gradient/gripper_horizontal.png", __ASSET__styles_gradient_gripper_horizontal_png);
+		type.set ("styles/gradient/gripper_horizontal.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/gripper_horizontal_disabled.png", __ASSET__styles_gradient_gripper_horizontal_disabled_png);
+		type.set ("styles/gradient/gripper_horizontal_disabled.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/gripper_vertical.png", __ASSET__styles_gradient_gripper_vertical_png);
+		type.set ("styles/gradient/gripper_vertical.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/gripper_vertical_disabled.png", __ASSET__styles_gradient_gripper_vertical_disabled_png);
+		type.set ("styles/gradient/gripper_vertical_disabled.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/hsplitter_gripper.png", __ASSET__styles_gradient_hsplitter_gripper_png);
+		type.set ("styles/gradient/hsplitter_gripper.png", AssetType.IMAGE);
+		
+		className.set ("styles/gradient/vsplitter_gripper.png", __ASSET__styles_gradient_vsplitter_gripper_png);
+		type.set ("styles/gradient/vsplitter_gripper.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/accordion.css", __ASSET__styles_windows_accordion_css);
+		type.set ("styles/windows/accordion.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/accordion.min.css", __ASSET__styles_windows_accordion_min_css);
+		type.set ("styles/windows/accordion.min.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/button.png", __ASSET__styles_windows_button_png);
+		type.set ("styles/windows/button.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/buttons.css", __ASSET__styles_windows_buttons_css);
+		type.set ("styles/windows/buttons.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/buttons.min.css", __ASSET__styles_windows_buttons_min_css);
+		type.set ("styles/windows/buttons.min.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/calendar.css", __ASSET__styles_windows_calendar_css);
+		type.set ("styles/windows/calendar.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/checkbox.png", __ASSET__styles_windows_checkbox_png);
+		type.set ("styles/windows/checkbox.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/container.png", __ASSET__styles_windows_container_png);
+		type.set ("styles/windows/container.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/glyphs/down_arrow.png", __ASSET__styles_windows_glyphs_down_arrow_png);
+		type.set ("styles/windows/glyphs/down_arrow.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/glyphs/hscroll_thumb_gripper_down.png", __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_down_png);
+		type.set ("styles/windows/glyphs/hscroll_thumb_gripper_down.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/glyphs/hscroll_thumb_gripper_over.png", __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_over_png);
+		type.set ("styles/windows/glyphs/hscroll_thumb_gripper_over.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/glyphs/hscroll_thumb_gripper_up.png", __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_up_png);
+		type.set ("styles/windows/glyphs/hscroll_thumb_gripper_up.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/glyphs/left_arrow.png", __ASSET__styles_windows_glyphs_left_arrow_png);
+		type.set ("styles/windows/glyphs/left_arrow.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/glyphs/right_arrow.png", __ASSET__styles_windows_glyphs_right_arrow_png);
+		type.set ("styles/windows/glyphs/right_arrow.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/glyphs/up_arrow.png", __ASSET__styles_windows_glyphs_up_arrow_png);
+		type.set ("styles/windows/glyphs/up_arrow.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/glyphs/vscroll_thumb_gripper_down.png", __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_down_png);
+		type.set ("styles/windows/glyphs/vscroll_thumb_gripper_down.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/glyphs/vscroll_thumb_gripper_over.png", __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_over_png);
+		type.set ("styles/windows/glyphs/vscroll_thumb_gripper_over.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/glyphs/vscroll_thumb_gripper_up.png", __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_up_png);
+		type.set ("styles/windows/glyphs/vscroll_thumb_gripper_up.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/hprogress.png", __ASSET__styles_windows_hprogress_png);
+		type.set ("styles/windows/hprogress.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/hscroll.png", __ASSET__styles_windows_hscroll_png);
+		type.set ("styles/windows/hscroll.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/listview.css", __ASSET__styles_windows_listview_css);
+		type.set ("styles/windows/listview.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/listview.min.css", __ASSET__styles_windows_listview_min_css);
+		type.set ("styles/windows/listview.min.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/listview.png", __ASSET__styles_windows_listview_png);
+		type.set ("styles/windows/listview.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/menus.css", __ASSET__styles_windows_menus_css);
+		type.set ("styles/windows/menus.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/optionbox.png", __ASSET__styles_windows_optionbox_png);
+		type.set ("styles/windows/optionbox.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/popup.png", __ASSET__styles_windows_popup_png);
+		type.set ("styles/windows/popup.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/popups.css", __ASSET__styles_windows_popups_css);
+		type.set ("styles/windows/popups.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/rtf.css", __ASSET__styles_windows_rtf_css);
+		type.set ("styles/windows/rtf.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/scrolls.css", __ASSET__styles_windows_scrolls_css);
+		type.set ("styles/windows/scrolls.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/scrolls.min.css", __ASSET__styles_windows_scrolls_min_css);
+		type.set ("styles/windows/scrolls.min.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/sliders.css", __ASSET__styles_windows_sliders_css);
+		type.set ("styles/windows/sliders.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/tab.png", __ASSET__styles_windows_tab_png);
+		type.set ("styles/windows/tab.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/tabs.css", __ASSET__styles_windows_tabs_css);
+		type.set ("styles/windows/tabs.css", AssetType.TEXT);
+		
+		className.set ("styles/windows/textinput.png", __ASSET__styles_windows_textinput_png);
+		type.set ("styles/windows/textinput.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/vprogress.png", __ASSET__styles_windows_vprogress_png);
+		type.set ("styles/windows/vprogress.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/vscroll.png", __ASSET__styles_windows_vscroll_png);
+		type.set ("styles/windows/vscroll.png", AssetType.IMAGE);
+		
+		className.set ("styles/windows/windows.css", __ASSET__styles_windows_windows_css);
+		type.set ("styles/windows/windows.css", AssetType.TEXT);
+		
+		className.set ("fonts/Oxygen-Bold.eot", __ASSET__fonts_oxygen_bold_eot);
+		type.set ("fonts/Oxygen-Bold.eot", AssetType.BINARY);
+		
+		className.set ("fonts/Oxygen-Bold.svg", __ASSET__fonts_oxygen_bold_svg);
+		type.set ("fonts/Oxygen-Bold.svg", AssetType.TEXT);
+		
+		className.set ("fonts/Oxygen-Bold.ttf", __ASSET__fonts_oxygen_bold_ttf);
+		type.set ("fonts/Oxygen-Bold.ttf", AssetType.FONT);
+		
+		className.set ("fonts/Oxygen-Bold.woff", __ASSET__fonts_oxygen_bold_woff);
+		type.set ("fonts/Oxygen-Bold.woff", AssetType.BINARY);
+		
+		className.set ("fonts/Oxygen-Bold.woff2", __ASSET__fonts_oxygen_bold_woff2);
+		type.set ("fonts/Oxygen-Bold.woff2", AssetType.BINARY);
+		
+		className.set ("fonts/Oxygen.eot", __ASSET__fonts_oxygen_eot);
+		type.set ("fonts/Oxygen.eot", AssetType.BINARY);
+		
+		className.set ("fonts/Oxygen.svg", __ASSET__fonts_oxygen_svg);
+		type.set ("fonts/Oxygen.svg", AssetType.TEXT);
+		
+		className.set ("fonts/Oxygen.ttf", __ASSET__fonts_oxygen_ttf);
+		type.set ("fonts/Oxygen.ttf", AssetType.FONT);
+		
+		className.set ("fonts/Oxygen.woff", __ASSET__fonts_oxygen_woff);
+		type.set ("fonts/Oxygen.woff", AssetType.BINARY);
+		
+		className.set ("fonts/Oxygen.woff2", __ASSET__fonts_oxygen_woff2);
+		type.set ("fonts/Oxygen.woff2", AssetType.BINARY);
 		
 		className.set ("assets/Ball.bmp", __ASSET__assets_ball_bmp);
 		type.set ("assets/Ball.bmp", AssetType.TEXT);
@@ -251,9 +1014,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/bluebrick.jpg", __ASSET__assets_bluebrick_jpg);
 		type.set ("assets/bluebrick.jpg", AssetType.IMAGE);
-		
-		className.set ("assets/boob3s4.jpg", __ASSET__assets_boob3s4_jpg);
-		type.set ("assets/boob3s4.jpg", AssetType.IMAGE);
 		
 		className.set ("assets/bossSnort.png", __ASSET__assets_bosssnort_png);
 		type.set ("assets/bossSnort.png", AssetType.IMAGE);
@@ -900,6 +1660,83 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
+@:keep @:bind #if display private #end class __ASSET__styles_default_circle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_default_collapse_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_default_cross_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_default_expand_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_default_up_down_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_down_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_down_dark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_down_disabled_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_left_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_left_disabled_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_right_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_right2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_right_dark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_right_disabled_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_up_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_arrow_up_disabled_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_circle_dark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_cross_dark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_cross_dark_disabled_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_cross_light_small_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_gradient_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_gradient_min_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_gradient_mobile_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_gradient_mobile_min_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_gripper_horizontal_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_gripper_horizontal_disabled_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_gripper_vertical_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_gripper_vertical_disabled_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_hsplitter_gripper_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_gradient_vsplitter_gripper_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_accordion_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_accordion_min_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_button_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_buttons_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_buttons_min_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_calendar_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_checkbox_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_container_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_glyphs_down_arrow_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_down_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_over_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_up_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_glyphs_left_arrow_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_glyphs_right_arrow_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_glyphs_up_arrow_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_down_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_over_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_up_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_hprogress_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_hscroll_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_listview_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_listview_min_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_listview_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_menus_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_optionbox_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_popup_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_popups_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_rtf_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_scrolls_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_scrolls_min_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_sliders_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_tab_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_tabs_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_textinput_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_vprogress_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_vscroll_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_windows_windows_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__fonts_oxygen_bold_eot extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__fonts_oxygen_bold_svg extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__fonts_oxygen_bold_ttf extends flash.text.Font { }
+@:keep @:bind #if display private #end class __ASSET__fonts_oxygen_bold_woff extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__fonts_oxygen_bold_woff2 extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__fonts_oxygen_eot extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__fonts_oxygen_svg extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__fonts_oxygen_ttf extends flash.text.Font { }
+@:keep @:bind #if display private #end class __ASSET__fonts_oxygen_woff extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__fonts_oxygen_woff2 extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_ball_bmp extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_block1_bmp extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_block2_bmp extends flash.utils.ByteArray { }
@@ -907,7 +1744,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_block4_bmp extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_blockbrick_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_bluebrick_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_boob3s4_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_bosssnort_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_bouncer_bmp extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_fire_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -952,6 +1788,82 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@:keep #if display private #end class __ASSET__fonts_oxygen_bold_ttf extends lime.text.Font { public function new () { super (); name = "Oxygen Bold"; } } 
+
+
+
+
+@:keep #if display private #end class __ASSET__fonts_oxygen_ttf extends lime.text.Font { public function new () { super (); name = "Oxygen Regular"; } } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #else
 
 
@@ -959,6 +1871,83 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux)
 
 
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/default/circle.png") #if display private #end class __ASSET__styles_default_circle_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/default/collapse.png") #if display private #end class __ASSET__styles_default_collapse_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/default/cross.png") #if display private #end class __ASSET__styles_default_cross_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/default/expand.png") #if display private #end class __ASSET__styles_default_expand_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/default/up_down.png") #if display private #end class __ASSET__styles_default_up_down_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_down.png") #if display private #end class __ASSET__styles_gradient_arrow_down_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_down_dark.png") #if display private #end class __ASSET__styles_gradient_arrow_down_dark_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_down_disabled.png") #if display private #end class __ASSET__styles_gradient_arrow_down_disabled_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_left.png") #if display private #end class __ASSET__styles_gradient_arrow_left_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_left_disabled.png") #if display private #end class __ASSET__styles_gradient_arrow_left_disabled_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_right.png") #if display private #end class __ASSET__styles_gradient_arrow_right_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_right2.png") #if display private #end class __ASSET__styles_gradient_arrow_right2_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_right_dark.png") #if display private #end class __ASSET__styles_gradient_arrow_right_dark_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_right_disabled.png") #if display private #end class __ASSET__styles_gradient_arrow_right_disabled_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_up.png") #if display private #end class __ASSET__styles_gradient_arrow_up_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/arrow_up_disabled.png") #if display private #end class __ASSET__styles_gradient_arrow_up_disabled_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/circle_dark.png") #if display private #end class __ASSET__styles_gradient_circle_dark_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/cross_dark.png") #if display private #end class __ASSET__styles_gradient_cross_dark_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/cross_dark_disabled.png") #if display private #end class __ASSET__styles_gradient_cross_dark_disabled_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/cross_light_small.png") #if display private #end class __ASSET__styles_gradient_cross_light_small_png extends lime.graphics.Image {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/gradient.css") #if display private #end class __ASSET__styles_gradient_gradient_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/gradient.min.css") #if display private #end class __ASSET__styles_gradient_gradient_min_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/gradient_mobile.css") #if display private #end class __ASSET__styles_gradient_gradient_mobile_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/gradient_mobile.min.css") #if display private #end class __ASSET__styles_gradient_gradient_mobile_min_css extends lime.utils.ByteArray {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/gripper_horizontal.png") #if display private #end class __ASSET__styles_gradient_gripper_horizontal_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/gripper_horizontal_disabled.png") #if display private #end class __ASSET__styles_gradient_gripper_horizontal_disabled_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/gripper_vertical.png") #if display private #end class __ASSET__styles_gradient_gripper_vertical_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/gripper_vertical_disabled.png") #if display private #end class __ASSET__styles_gradient_gripper_vertical_disabled_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/hsplitter_gripper.png") #if display private #end class __ASSET__styles_gradient_hsplitter_gripper_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/gradient/vsplitter_gripper.png") #if display private #end class __ASSET__styles_gradient_vsplitter_gripper_png extends lime.graphics.Image {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/accordion.css") #if display private #end class __ASSET__styles_windows_accordion_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/accordion.min.css") #if display private #end class __ASSET__styles_windows_accordion_min_css extends lime.utils.ByteArray {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/button.png") #if display private #end class __ASSET__styles_windows_button_png extends lime.graphics.Image {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/buttons.css") #if display private #end class __ASSET__styles_windows_buttons_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/buttons.min.css") #if display private #end class __ASSET__styles_windows_buttons_min_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/calendar.css") #if display private #end class __ASSET__styles_windows_calendar_css extends lime.utils.ByteArray {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/checkbox.png") #if display private #end class __ASSET__styles_windows_checkbox_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/container.png") #if display private #end class __ASSET__styles_windows_container_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/glyphs/down_arrow.png") #if display private #end class __ASSET__styles_windows_glyphs_down_arrow_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/glyphs/hscroll_thumb_gripper_down.png") #if display private #end class __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_down_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/glyphs/hscroll_thumb_gripper_over.png") #if display private #end class __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_over_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/glyphs/hscroll_thumb_gripper_up.png") #if display private #end class __ASSET__styles_windows_glyphs_hscroll_thumb_gripper_up_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/glyphs/left_arrow.png") #if display private #end class __ASSET__styles_windows_glyphs_left_arrow_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/glyphs/right_arrow.png") #if display private #end class __ASSET__styles_windows_glyphs_right_arrow_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/glyphs/up_arrow.png") #if display private #end class __ASSET__styles_windows_glyphs_up_arrow_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/glyphs/vscroll_thumb_gripper_down.png") #if display private #end class __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_down_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/glyphs/vscroll_thumb_gripper_over.png") #if display private #end class __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_over_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/glyphs/vscroll_thumb_gripper_up.png") #if display private #end class __ASSET__styles_windows_glyphs_vscroll_thumb_gripper_up_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/hprogress.png") #if display private #end class __ASSET__styles_windows_hprogress_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/hscroll.png") #if display private #end class __ASSET__styles_windows_hscroll_png extends lime.graphics.Image {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/listview.css") #if display private #end class __ASSET__styles_windows_listview_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/listview.min.css") #if display private #end class __ASSET__styles_windows_listview_min_css extends lime.utils.ByteArray {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/listview.png") #if display private #end class __ASSET__styles_windows_listview_png extends lime.graphics.Image {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/menus.css") #if display private #end class __ASSET__styles_windows_menus_css extends lime.utils.ByteArray {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/optionbox.png") #if display private #end class __ASSET__styles_windows_optionbox_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/popup.png") #if display private #end class __ASSET__styles_windows_popup_png extends lime.graphics.Image {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/popups.css") #if display private #end class __ASSET__styles_windows_popups_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/rtf.css") #if display private #end class __ASSET__styles_windows_rtf_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/scrolls.css") #if display private #end class __ASSET__styles_windows_scrolls_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/scrolls.min.css") #if display private #end class __ASSET__styles_windows_scrolls_min_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/sliders.css") #if display private #end class __ASSET__styles_windows_sliders_css extends lime.utils.ByteArray {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/tab.png") #if display private #end class __ASSET__styles_windows_tab_png extends lime.graphics.Image {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/tabs.css") #if display private #end class __ASSET__styles_windows_tabs_css extends lime.utils.ByteArray {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/textinput.png") #if display private #end class __ASSET__styles_windows_textinput_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/vprogress.png") #if display private #end class __ASSET__styles_windows_vprogress_png extends lime.graphics.Image {}
+@:image("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/vscroll.png") #if display private #end class __ASSET__styles_windows_vscroll_png extends lime.graphics.Image {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/styles/windows/windows.css") #if display private #end class __ASSET__styles_windows_windows_css extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/fonts/Oxygen-Bold.eot") #if display private #end class __ASSET__fonts_oxygen_bold_eot extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/fonts/Oxygen-Bold.svg") #if display private #end class __ASSET__fonts_oxygen_bold_svg extends lime.utils.ByteArray {}
+@:font("/usr/lib/haxelib/haxeui/1,7,20/assets/fonts/Oxygen-Bold.ttf") #if display private #end class __ASSET__fonts_oxygen_bold_ttf extends lime.text.Font {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/fonts/Oxygen-Bold.woff") #if display private #end class __ASSET__fonts_oxygen_bold_woff extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/fonts/Oxygen-Bold.woff2") #if display private #end class __ASSET__fonts_oxygen_bold_woff2 extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/fonts/Oxygen.eot") #if display private #end class __ASSET__fonts_oxygen_eot extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/fonts/Oxygen.svg") #if display private #end class __ASSET__fonts_oxygen_svg extends lime.utils.ByteArray {}
+@:font("/usr/lib/haxelib/haxeui/1,7,20/assets/fonts/Oxygen.ttf") #if display private #end class __ASSET__fonts_oxygen_ttf extends lime.text.Font {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/fonts/Oxygen.woff") #if display private #end class __ASSET__fonts_oxygen_woff extends lime.utils.ByteArray {}
+@:file("/usr/lib/haxelib/haxeui/1,7,20/assets/fonts/Oxygen.woff2") #if display private #end class __ASSET__fonts_oxygen_woff2 extends lime.utils.ByteArray {}
 @:file("Assets/Ball.bmp") #if display private #end class __ASSET__assets_ball_bmp extends lime.utils.ByteArray {}
 @:file("Assets/Block1.bmp") #if display private #end class __ASSET__assets_block1_bmp extends lime.utils.ByteArray {}
 @:file("Assets/Block2.bmp") #if display private #end class __ASSET__assets_block2_bmp extends lime.utils.ByteArray {}
@@ -966,7 +1955,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("Assets/Block4.bmp") #if display private #end class __ASSET__assets_block4_bmp extends lime.utils.ByteArray {}
 @:image("Assets/blockbrick.jpg") #if display private #end class __ASSET__assets_blockbrick_jpg extends lime.graphics.Image {}
 @:image("Assets/bluebrick.jpg") #if display private #end class __ASSET__assets_bluebrick_jpg extends lime.graphics.Image {}
-@:image("Assets/boob3s4.jpg") #if display private #end class __ASSET__assets_boob3s4_jpg extends lime.graphics.Image {}
 @:image("Assets/bossSnort.png") #if display private #end class __ASSET__assets_bosssnort_png extends lime.graphics.Image {}
 @:file("Assets/Bouncer.bmp") #if display private #end class __ASSET__assets_bouncer_bmp extends lime.utils.ByteArray {}
 @:image("Assets/fire.JPG") #if display private #end class __ASSET__assets_fire_jpg extends lime.graphics.Image {}
@@ -988,6 +1976,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 #end
 
 #if openfl
+@:keep #if display private #end class __ASSET__OPENFL__fonts_oxygen_bold_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__fonts_oxygen_bold_ttf (); src = font.src; name = font.name; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__fonts_oxygen_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__fonts_oxygen_ttf (); src = font.src; name = font.name; super (); }}
 
 #end
 

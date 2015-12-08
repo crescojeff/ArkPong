@@ -1,4 +1,6 @@
 ﻿package com.ai.arkpong.control;
+import com.ai.arkpong.model.AIPaddle;
+import com.ai.arkpong.model.Paddle;
 import haxe.ui.toolkit.controls.Button;
 import openfl.display.*;
 import openfl.events.*;
@@ -29,7 +31,7 @@ class Power extends MovieClip {
 	var mainRef:ArkPongMain;
 	var randomNum:Float;
 	
-	public function powerUp(paddle:MovieClip,ball:MovieClip,theBall:PrimaryBall,ePaddle:MovieClip,startB:Button,myX:Float,myY:Float,level:Array,bricksH:Bricks,stageR:Stage,mainR:ArkPongMain){
+	public function new(paddle:Paddle,ball:PrimaryBall,theBall:PrimaryBall,ePaddle:AIPaddle,startB:Button,myX:Float,myY:Float,level:Array,bricksH:Bricks,stageR:Stage,mainR:ArkPongMain){
 		this.myBall=ball;
 		this.myPaddle=paddle;
 		this.ball=theBall;
@@ -98,66 +100,66 @@ class Power extends MovieClip {
 		if(randomNum<.15){
 		//if(randomNum<.25){
 			//myPower=ArkPongMain powerFire();
-			mainRef.power="fire";
+			mainRef.getPlayerPower()="fire";
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
 			mainRef.myPowerCount++;
 		}
-		
+
 		if(randomNum>=.15 && randomNum<.3){
 			//myPower=ArkPongMain powerFreeze();
-			mainRef.power="freeze";
+			mainRef.getPlayerPower()="freeze";
 			myPower.x=27.5;
 			myPower.y=0;
-			addChild(myPower)
+			addChild(myPower);
 			mainRef.myPowerCount++;
 		}
 		if(randomNum>=.3 && randomNum<.45){
-		
+
 		//if(randomNum>=.75){
 			//myPower=ArkPongMain powerNinja();
-			mainRef.power="ninja";
+			mainRef.getPlayerPower()="ninja";
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
 			mainRef.myPowerCount++;
 		}
-		
+
 		//}
 		if(randomNum>=.45 && randomNum<.6){
-		
+
 			//myPower=ArkPongMain powerSplit();
-			mainRef.power="split";
+			mainRef.getPlayerPower()="split";
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
 			mainRef.myPowerCount++;
-		
+
 		}
-		
+
 		if(randomNum>=.6 && randomNum<.75){
-		
+
 			//myPower=ArkPongMain powerPunch();
-			mainRef.power="punch";
+			mainRef.getPlayerPower()="punch";
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
 			mainRef.myPowerCount++;
-		
-		
+
+
 		}
 		if(randomNum>=.75){
 			//myPower=ArkPongMain powerGold();
-			mainRef.power="gold";
+			mainRef.getPlayerPower()="gold";
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
 			mainRef.myPowerCount++;
 		}
-		
+
 		appeared=true;
-		
+
 	}
 	public function loadImage(){//will need paramter indicating the random number chosen by brickPower before it died
 		//number of conditional cases and breakdown of random number ranges will depend on how many powerups there are
@@ -172,45 +174,45 @@ class Power extends MovieClip {
 		controlAtHit=ball.control;
 		var randomNum:Float=Math.random();
 		if(randomNum<.15){
-			url="powerFire.png"
+			url="powerFire.png";
 		}
 		if(randomNum>=.15 && randomNum<.3){
-			url="powerFreeze.png"
+			url="powerFreeze.png";
 		}
 		if(randomNum>=.3 && randomNum<.45){
-			url="powerNinja.png"
+			url="powerNinja.png";
 		}
 		if(randomNum>=.45 && randomNum<.6){
-			url="powerSplit.png"
+			url="powerSplit.png";
 		}
 		if(randomNum>=.6 && randomNum<.75){
-			url="powerPunch.png"
+			url="powerPunch.png";
 		}
 		if(randomNum>=.75){
-			url="powerGold.png"
+			url="powerGold.png";
 		}
-		
+
 		var request:URLRequest=new URLRequest(url);
-		
+
 		loader.load(request);
 		loader.contentLoaderInfo.addEventListener(Event.COMPLETE, drawImage);
 		loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
-	
+
 	}
-	
+
 	public function drawImage(event:Event){
 		var mySprite:Sprite=new Sprite();
 		var myBitmap:BitmapData=new BitmapData(loader.width, loader.height, false);
-  
+
 		myBitmap.draw(loader);//, ArkPongMain Matrix());
-		
+
 		//var matrix:Matrix=ArkPongMain Matrix();
 	   // matrix.rotate(Math.PI/4);
-		
+
 		mySprite.graphics.beginBitmapFill(myBitmap, null, false);
 		mySprite.graphics.drawRect(0, 0, 25, 25);
 		mySprite.graphics.endFill();
-		
+
 		addChild(mySprite);
 	}
 	private function ioErrorHandler(event:IOErrorEvent):Void {
@@ -233,7 +235,7 @@ class Power extends MovieClip {
 			this.removeEventListener(Event.ENTER_FRAME, effect);
 			this.parent.removeChild(this);
 			appeared=false;
-			
+
 		}
 		if(!mainRef.isPaused){
 		if(appeared){
@@ -251,49 +253,49 @@ class Power extends MovieClip {
 				mainRef.addChildAt(ball.ex,1);
 				ball.ex.showPowerUp();
 				*/
-				
+
 				//light up the relevant power under player Powers
 				//provided mainRef.playerPowerCount is<=2.
-			if(mainRef.playerPowerCount<2 && mainRef.power !="gold"){
-				//mainRef.playerPowerCount++;
+			if(mainRef.playerPowerCount<2 && mainRef.getPlayerPower() !="gold"){
+				//mainRef.incPlayerPowerCount();
 				trace("alpha:" + mainRef.get_abilityFire_Player().alpha);
 				trace("pPC:" + mainRef.playerPowerCount);
-				if(mainRef.power=="fire" && mainRef.get_abilityFire_Player().alpha<1){
+				if(mainRef.getPlayerPower()=="fire" && mainRef.get_abilityFire_Player().alpha<1){
 					mainRef.get_abilityFire_Player().alpha=1;
-					mainRef.playerPowerCount++;
+					mainRef.incPlayerPowerCount();
 					trace("pPC:" + mainRef.playerPowerCount);
 				}
-				if(mainRef.power=="freeze" && mainRef.get_abilityFreeze_Player().alpha<1){
+				if(mainRef.getPlayerPower()=="freeze" && mainRef.get_abilityFreeze_Player().alpha<1){
 					mainRef.get_abilityFreeze_Player().alpha=1;
-					mainRef.playerPowerCount++;
+					mainRef.incPlayerPowerCount();
 					trace("pPC:" + mainRef.playerPowerCount);
 				}
-				if(mainRef.power=="ninja" && mainRef.get_abilityNinjaStar_Player().alpha<1){
+				if(mainRef.getPlayerPower()=="ninja" && mainRef.get_abilityNinjaStar_Player().alpha<1){
 					mainRef.get_abilityNinjaStar_Player().alpha=1;
-					mainRef.playerPowerCount++;
+					mainRef.incPlayerPowerCount();
 					trace("pPC:" + mainRef.playerPowerCount);
 				}
-				if(mainRef.power=="punch" && mainRef.get_abilityPunchThrough_Player().alpha<1){
+				if(mainRef.getPlayerPower()=="punch" && mainRef.get_abilityPunchThrough_Player().alpha<1){
 					mainRef.get_abilityPunchThrough_Player().alpha=1;
-					mainRef.playerPowerCount++;
+					mainRef.incPlayerPowerCount();
 					trace("pPC:" + mainRef.playerPowerCount);
 				}
-				if(mainRef.power=="split" && mainRef.get_abilitySplit_Player().alpha<1){
+				if(mainRef.getPlayerPower()=="split" && mainRef.get_abilitySplit_Player().alpha<1){
 					mainRef.get_abilitySplit_Player().alpha=1;
-					mainRef.playerPowerCount++;
+					mainRef.incPlayerPowerCount();
 					trace("pPC:" + mainRef.playerPowerCount);
 				}
 			}
-				if(mainRef.power=="gold"){
+				if(mainRef.getPlayerPower()=="gold"){
 					//no HUD graphic for gold, but immediate effect
 					ball.playerScore++;
 					ball.score.text="PLAYER SCORE:" + ball.playerScore;
 					if(ball.playerScore>=10){
 						ball.playerWin();
 					}
-					mainRef.power="";
+					mainRef.getPlayerPower()="";
 				}
-				
+
 				//removing the myPower graphic
 				for(i in 0...this.numChildren){
 					if(this.getChildAt(i)!=null){
@@ -303,10 +305,10 @@ class Power extends MovieClip {
 				}
 				//this.parent.removeChild(this);
 			}
-			
+
 			if(myPower.hitTestObject(evilPaddle)){
 				//showing the 'enemy got a power!' sparks on evilPaddle
-				
+
 				/*see above
 				ball.ex=ArkPongMain Explode(evilPaddle.x,57,1);
 				mainRef.addChildAt(ball.ex,1);
@@ -318,47 +320,47 @@ class Power extends MovieClip {
 				mainRef.addChildAt(ball.ex,1);
 				ball.ex.showPowerUp();
 				*/
-				
+
 				//light up the relevant power under enemy Powers
 				//provided mainRef.enemyPowerCount is<=2.
-			if(mainRef.enemyPowerCount<2 && mainRef.power !="gold"){
-				//mainRef.playerPowerCount++;
+			if(mainRef.enemyPowerCount<2 && mainRef.getPlayerPower() !="gold"){
+				//mainRef.incPlayerPowerCount();
 				trace("alpha:" + mainRef.get_abilityFire_Enemy().alpha);
 				trace("pPC:" + mainRef.enemyPowerCount);
-				if(mainRef.power=="fire" && mainRef.get_abilityFire_Enemy().alpha<1){
+				if(mainRef.getPlayerPower()=="fire" && mainRef.get_abilityFire_Enemy().alpha<1){
 					mainRef.get_abilityFire_Enemy().alpha=1;
 					mainRef.enemyPowerCount++;
 					trace("pPC:" + mainRef.enemyPowerCount);
 				}
-				if(mainRef.power=="freeze" && mainRef.get_abilityFreeze_Enemy().alpha<1){
+				if(mainRef.getPlayerPower()=="freeze" && mainRef.get_abilityFreeze_Enemy().alpha<1){
 					mainRef.get_abilityFreeze_Enemy().alpha=1;
 					mainRef.enemyPowerCount++;
 					trace("pPC:" + mainRef.enemyPowerCount);
 				}
-				if(mainRef.power=="ninja" && mainRef.get_abilityNinjaStar_Enemy().alpha<1){
+				if(mainRef.getPlayerPower()=="ninja" && mainRef.get_abilityNinjaStar_Enemy().alpha<1){
 					mainRef.get_abilityNinjaStar_Enemy().alpha=1;
 					mainRef.enemyPowerCount++;
 					trace("pPC:" + mainRef.enemyPowerCount);
 				}
-				if(mainRef.power=="punch" && mainRef.get_abilityPunchThrough_Enemy().alpha<1){
+				if(mainRef.getPlayerPower()=="punch" && mainRef.get_abilityPunchThrough_Enemy().alpha<1){
 					mainRef.get_abilityPunchThrough_Enemy().alpha=1;
 					mainRef.enemyPowerCount++;
 					trace("pPC:" + mainRef.enemyPowerCount);
 				}
-				if(mainRef.power=="split" && mainRef.get_abilitySplit_Enemy().alpha<1){
+				if(mainRef.getPlayerPower()=="split" && mainRef.get_abilitySplit_Enemy().alpha<1){
 					mainRef.get_abilitySplit_Enemy().alpha=1;
 					mainRef.enemyPowerCount++;
 					trace("pPC:" + mainRef.enemyPowerCount);
 				}
 			}
-				if(mainRef.power=="gold"){
+				if(mainRef.getPlayerPower()=="gold"){
 					//no HUD graphic for gold, but immediate effect
 					ball.enemyScore++;
 					ball.eScore.text="ENEMY SCORE:" + ball.enemyScore;
 					if(ball.enemyScore>=10){
 						ball.enemyWin();
 					}
-					mainRef.power="";
+					mainRef.getPlayerPower()="";
 				}
 				
 			

@@ -56,7 +56,7 @@ import com.ai.arkpong.control.Bricks;
 import com.ai.arkpong.control.Bricks;
 import com.ai.arkpong.model.Paddle;
 import com.ai.arkpong.control.PrimaryBall;
-import org.coretween.Tween;
+
 import openfl.events.MouseEvent;
 import openfl.events.TimerEvent;
 import openfl.events.Event;
@@ -64,16 +64,15 @@ import openfl.events.KeyboardEvent;
 import openfl.display.MovieClip;
 import openfl.display.StageScaleMode;
 import openfl.display.DisplayObject;
-import flash.ui.Keyboard;
-import flash.ui.MouseCursor;
-import flash.ui.Mouse;
-import flash.display.Stage;
-import flash.net.*;
-import flash.media.*;
+
+import openfl.ui.Mouse;
+import openfl.display.Stage;
+import openfl.net.*;
+import openfl.media.*;
 import haxe.ui.toolkit.controls.Button;
-import org.coretween.easing.*;
+
 import openfl.utils.Timer;
-import flash.system.*;
+import openfl.system.*;
 import com.ai.arkpong.view.PauseMenu;
 
 import haxe.ui.toolkit.core.Macros;
@@ -81,6 +80,11 @@ import haxe.ui.toolkit.core.Toolkit;
 import haxe.ui.toolkit.core.Root;
 import haxe.ui.toolkit.controls.Button;
 import haxe.ui.toolkit.events.UIEvent;
+
+/*//TODO: uncomment when tweening is back
+import org.coretween.easing.*;
+import org.coretween.Tween;
+*/
 
 
 class ArkPongMain extends MovieClip{
@@ -108,7 +112,7 @@ class ArkPongMain extends MovieClip{
 	//var menuLayer:Layer;
 	public var menuButton:Button;
 	var isReset:Bool=false;
-	var myPowerCount:Int=0;
+	var myPowerCount:Int=0;//TODO: wtf?  why are there two power count fields?
 	var power:String;// power just released.  Once there are multiple powerbricks on the level, this will need to be an array or LL of strings...
 	
 	var fireBall:ArkPongMovieClip=new ArkPongMovieClip();//these two are projectiles that get instantiated and destroyed repeatedly
@@ -116,11 +120,13 @@ class ArkPongMain extends MovieClip{
 	//var ninjaStars:flyingNinja;//these two are projectiles that get instantiated and destroyed repeatedly
 	var starsArray:Array<Dynamic>=new Array();//this array can hold the ninjaStars objects such that they will be indexed and therefore separately addressable
 	var numStars:Int=0;
-	var callParts:CallParts;
+	//var callParts:CallParts;//TODO: uncomment when particles are back
 	var freezeTimer:Timer;
 	var freezeTimer2:Timer;
-	var myTweenAlpha:Tween;
+	/*//TODO: uncomment when tweening is back
+    var myTweenAlpha:Tween;
 	var myTweenY:Tween;
+    */
 	/////var splitTimer:Timer=ArkPongMain Timer(5000, 1);//moved to ball2 now
 	public var mv_rTempBall:TemporaryBall;
 	var playerPowerCount:Int=0;//the playerPowerCount and enemyPowerCount varaibles track how many powerups the player and enemy have accumluated, respectively.
@@ -145,6 +151,18 @@ class ArkPongMain extends MovieClip{
     @:isVar var abilityPunchThrough_Enemy(get, null):Button;
     @:isVar var abilitySplit_Enemy:Button;
 
+    public function getPlayerPowerCount():Int{
+        return playerPowerCount;
+    }
+    public function incPlayerPowerCount():Void{
+        playerPowerCount++;
+    }
+    public function decPlayerPowerCount():Void{
+        playerPowerCount--;
+    }
+    public function getPlayerPower():String{
+        return power;
+    }
     public function get_abilityFire_Player():Button {
         return abilityFire_Player;
     }
@@ -219,7 +237,7 @@ class ArkPongMain extends MovieClip{
 		freezeTimer.addEventListener(TimerEvent.TIMER_COMPLETE, unfreeze);
 		freezeTimer2=new Timer(2000, 1);
 		freezeTimer2.addEventListener(TimerEvent.TIMER_COMPLETE, unfreeze2);
-		addChild(startButton)
+		addChild(startButton);
 		startButton.addEventListener(MouseEvent.CLICK, begin);
 		menuButton.addEventListener(MouseEvent.CLICK, pausePlay);
 		//theBackground.addEventListener(MouseEvent.MOUSE_WHEEL, usePower);
@@ -507,8 +525,10 @@ class ArkPongMain extends MovieClip{
 			this.setChildIndex(myMenuUI, this.numChildren - 1);
 			//var myTween:Tween=ArkPongMain Tween(myMenuUI, "x", Strong.easeOut, 0, 300, 3, true);
 			//var myTweenX:Tween=ArkPongMain Tween(myMenuUI, "x", Strong.easeOut, 0, 150, 3, true);
-			myTweenAlpha=new Tween(myMenuUI, "alpha", 0.5, 0, 1, 3, true);
+			/*//TODO: revisit with OpenFL-based tween later
+                myTweenAlpha=new Tween(myMenuUI, "alpha", 0.5, 0, 1, 3, true);
 			myTweenY=new Tween(myMenuUI, "y", 0.5, 0, 150, 3, true);
+			*/
 			//var myTweenWidth:Tween=ArkPongMain Tween(myMenuUI, "width", Strong.easeOut, myMenuUI.width-200, myMenuUI.width, 3, true);
 			//var myTweenHeight:Tween=ArkPongMain Tween(myMenuUI, "height", Strong.easeOut, myMenuUI.height-200, myMenuUI.height, 3, true);
 			//var myTweenRotation:Tween=ArkPongMain Tween(myMenuUI, "rotation", Strong.easeOut, 0, 360, 3, true);
@@ -688,15 +708,15 @@ class ArkPongMain extends MovieClip{
 			trace("used fire!");
 			//fireBall=ArkPongMain powerFire()
 			//trace(fireBall.name);
-			fireBall.x=(mv_rPlayerPaddle.x +(mv_rPlayerPaddle.width/2))
+			fireBall.x=(mv_rPlayerPaddle.x +(mv_rPlayerPaddle.width/2));
 			fireBall.y=mv_rPlayerPaddle.y - 15;
 			fireBall.scaleX=5;
 			fireBall.scaleY=5;
-			addChild(fireBall)
+			addChild(fireBall);
 			//powerMotion("fire",fireBall,1,Event.ENTER_FRAME);
 			fireBall.addEventListener(Event.ENTER_FRAME, powerMotion);
 			power="";
-            abilityFire_Player.alpha=.25
+            abilityFire_Player.alpha=.25;
 		}
 		if(event.target==abilityFreeze_Player && abilityFreeze_Player.alpha==1){
 			playerPowerCount--;
@@ -705,7 +725,7 @@ class ArkPongMain extends MovieClip{
 			freezeTimer.start();
 			//freezeTimer.addEventListener(TimerEvent.TIMER_COMPLETE, unfreeze);
 			power="";
-            abilityFreeze_Player.alpha=.25
+            abilityFreeze_Player.alpha=.25;
 		}
 		if(event.target==abilityNinjaStar_Player && abilityNinjaStar_Player.alpha==1){
 			playerPowerCount--;
@@ -724,21 +744,21 @@ class ArkPongMain extends MovieClip{
 				//trace("ffmain children:" + this.getChildAt(i));
 			//}
 			power="";
-            abilityNinjaStar_Player.alpha=.25
+            abilityNinjaStar_Player.alpha=.25;
 		}
 		if(event.target==abilityPunchThrough_Player && abilityPunchThrough_Player.alpha==1){
 			playerPowerCount--;
 			trace("used punch!");
             mv_rMainBall.punchPower=true;
 			power="";
-            abilityPunchThrough_Player.alpha=.25
+            abilityPunchThrough_Player.alpha=.25;
 		}
 		if(event.target==abilitySplit_Player && abilitySplit_Player.alpha==1){
 			playerPowerCount--;
 			trace("used split!");
 			ballMultiply();
 			power="";
-            abilitySplit_Player.alpha=.25
+            abilitySplit_Player.alpha=.25;
 		}
 		/*
 		if(power=="fire"){
@@ -781,15 +801,15 @@ class ArkPongMain extends MovieClip{
 			trace("enemy used fire!");
 			//fireBall=ArkPongMain powerFire()
 			//trace(fireBall.name);
-			enemyFireBall.x=(evilPaddle.x +(evilPaddle.width/2))
+			enemyFireBall.x=(evilPaddle.x +(evilPaddle.width/2));
 			enemyFireBall.y=evilPaddle.y + 15;
 			enemyFireBall.scaleX=5;
 			enemyFireBall.scaleY=5;
-			addChild(enemyFireBall)
+			addChild(enemyFireBall);
 			//powerMotion("fire",fireBall,1,Event.ENTER_FRAME);
 			enemyFireBall.addEventListener(Event.ENTER_FRAME, ePowerMotion);
 			power="";
-			abilityFire_Enemy.alpha=.25
+			abilityFire_Enemy.alpha=.25;
 		}
 		if(powerChosen=="freeze"){
 			enemyPowerCount--;
@@ -798,7 +818,7 @@ class ArkPongMain extends MovieClip{
 			freezeTimer2.start();
 			//freezeTimer.addEventListener(TimerEvent.TIMER_COMPLETE, unfreeze);
 			power="";
-			abilityFreeze_Enemy.alpha=.25
+			abilityFreeze_Enemy.alpha=.25;
 		}
 		if(powerChosen=="stars"){
 			playerPowerCount--;
@@ -817,21 +837,21 @@ class ArkPongMain extends MovieClip{
 				//trace("ffmain children:" + this.getChildAt(i));
 			//}
 			power="";
-			abilityNinjaStar_Player.alpha=.25
+			abilityNinjaStar_Player.alpha=.25;
 		}
 		if(powerChosen=="punch"){
 			playerPowerCount--;
 			trace("used punch!");
             mv_rMainBall.punchPower=true;
 			power="";
-			abilityPunchThrough_Player.alpha=.25
+			abilityPunchThrough_Player.alpha=.25;
 		}
 		if(powerChosen=="split"){
 			playerPowerCount--;
 			trace("used split!");
 			ballMultiply();
 			power="";
-			abilitySplit_Player.alpha=.25
+			abilitySplit_Player.alpha=.25;
 		}
 	}
 	
@@ -855,8 +875,10 @@ class ArkPongMain extends MovieClip{
 				removeChild(enemyFireBall);
 			}
 			else if(enemyFireBall.y>=550){
+                /*//TODO: uncomment when particles are back
 				callParts=new CallParts((enemyFireBall.x +(enemyFireBall.width/2)),550);
 				addChild(callParts);
+                */
                 mv_rMainBall.enemyScore +=1;
                 mv_rMainBall.eScore.text="ENEMY SCORE:" + mv_rMainBall.enemyScore;
 				enemyFireBall.removeEventListener(Event.ENTER_FRAME, ePowerMotion);
@@ -883,8 +905,10 @@ class ArkPongMain extends MovieClip{
 				removeChild(fireBall);
 			}
 			else if(fireBall.y<=40){
+                /*//TODO: uncomment when particles are back
 				callParts=new CallParts((fireBall.x +(fireBall.width/2)),50);
 				addChild(callParts);
+                */
                 mv_rMainBall.playerScore +=1;
                 mv_rMainBall.score.text="PLAYER SCORE:" + mv_rMainBall.playerScore;
 				fireBall.removeEventListener(Event.ENTER_FRAME, powerMotion);

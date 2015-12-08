@@ -1,9 +1,9 @@
 ﻿package com.ai.arkpong.control;
 import com.ai.arkpong.view.ArkPongMovieClip;
-import com.ai.arkpong.view.Explode;
+//import com.ai.arkpong.view.Explode;//TODO: uncomment when particles are back
 import haxe.ui.toolkit.controls.Button;
-import flash.display.*;
-import flash.events.*;
+import openfl.display.*;
+import openfl.events.*;
 import openfl.display.MovieClip;
 import haxe.ui.toolkit.controls.Text;
 import openfl.utils.Timer;
@@ -26,7 +26,9 @@ class PrimaryBall extends Ball {
 	var bottomHit2:Int=0;//monitors hits in-a-row on floor [probably not needed]
 	var theBackground:ArkPongMovieClip = new ArkPongMovieClip();//ArkPongMain myBackground();
 
+    /*//TODO: uncomment when particles are back
 	var ex:Explode=new Explode();
+    */
 	var power:Power;
 	var trackLvl:Int;
 	//var splitTimer:Timer=ArkPongMain Timer(5000, 1);
@@ -102,7 +104,9 @@ class PrimaryBall extends Ball {
 		eScore.text="ENEMY SCORE:" + enemyScore;
 		addChild(score);
 		addChild(eScore);
-		addChild(ex);
+/*//TODO: uncomment when particles are back
+        addChild(ex);
+        */
 		//moveTimer.addEventListener(TimerEvent.TIMER, expMotion);
 		//moveTimer.start();
 		
@@ -184,7 +188,9 @@ class PrimaryBall extends Ball {
 			enemyScore +=1;
 			//addChild(eScore);
 			//callParts=ArkPongMain CallParts((myBall.x +(myBall.width/2)),450);
-			ex.showExplosion(myBall.x,myBall.y,3);
+/*//TODO: uncomment when particles are back
+                ex.showExplosion(myBall.x,myBall.y,3);
+                */
 			
 			//addChild(callParts);
 			eScore.text="ENEMY SCORE:" + enemyScore;
@@ -237,7 +243,9 @@ class PrimaryBall extends Ball {
 			playerScore +=1;
 			//callParts=ArkPongMain CallParts((myBall.x +(myBall.width/2)),50);
 			//addChild(callParts);
+/*//TODO: uncomment when particles are back
 			ex.showExplosion(myBall.x,myBall.y,2);
+                */
 			
 			score.text="PLAYER SCORE:" + playerScore;
 				if(playerScore>=10){
@@ -373,7 +381,9 @@ class PrimaryBall extends Ball {
 			//addChild(eScore);
 			//callParts=ArkPongMain CallParts((myBall.x +(myBall.width/2)),450);
 			//addChild(callParts);
+/*//TODO: uncomment when particles are back
 			ex.showExplosion(myBall.x,myBall.y,3);
+                */
 			
 			eScore.text="ENEMY SCORE:" + enemyScore;
 				if(enemyScore>=10){
@@ -425,7 +435,9 @@ class PrimaryBall extends Ball {
 			playerScore +=1;
 			//callParts=ArkPongMain CallParts((myBall.x +(myBall.width/2)),50);//CONDITION SHOULD BE  myBall.y<=50 FOR RELEASE
 			//addChild(callParts);
+/*//TODO: uncomment when particles are back
 			ex.showExplosion(myBall.x,myBall.y,2);
+                */
 			
 			score.text="PLAYER SCORE:" + playerScore;
 				if(playerScore>=10){

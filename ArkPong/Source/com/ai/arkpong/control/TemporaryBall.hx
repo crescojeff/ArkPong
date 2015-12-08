@@ -1,6 +1,6 @@
 ﻿package com.ai.arkpong.control;
 
-import com.ai.arkpong.view.Explode;
+//import com.ai.arkpong.view.Explode;//TODO: uncomment when particles are back
 import haxe.ui.toolkit.controls.Button;
 import openfl.display.*;
 import openfl.events.*;
@@ -10,7 +10,7 @@ import haxe.ui.toolkit.controls.Text;
 import openfl.utils.Timer;
 import haxe.ui.toolkit.controls.Button;
 import openfl.ui.Mouse;
-import org.flintparticles.common.counters.TimePeriod;
+//import org.flintparticles.common.counters.TimePeriod;//TODO: uncomment when particles are back
 
 class TemporaryBall extends Ball{
    //These variables are needed for moving the ball
@@ -25,7 +25,7 @@ class TemporaryBall extends Ball{
 	var topHit2:Int=0;//monitors hits in-a-row on ceiling
 	var bottomHit2:Int=0;//monitors hits in-a-row on floor [probably not needed]
 	//var theBackground:MovieClip=new myBackground();
-	var ex:Explode;
+	//var ex:Explode;//TODO: uncomment when particles are back
 	var power:Power;
 	var trackLvl:Int;
 	public var myBall:PrimaryBall;
@@ -43,7 +43,7 @@ class TemporaryBall extends Ball{
 	var noHurt:Int=0;
 	public var startButton:Button;
 	var theStage:Stage;
-	var callParts:CallParts;
+	//var callParts:CallParts;//TODO: uncomment when particles are back
 	var stuckTimer:Timer=new Timer(250,1);
 	var deathTimer:Timer=new Timer(200,1);//this timer will be invoked just after the ball2 is slated to disappear such that it exists for a split second AFTER it is no longer listening for collisions etc. This way we won't get phantom leaks when the ball2 dies as it is still registering a collision.
 	var splitTimer:Timer=new Timer(5000, 1);//decided to have splittiemr here so that ball2 handles itself completely
@@ -190,8 +190,10 @@ class TemporaryBall extends Ball{
 			if(noHurt==0){
 			    myBall.enemyScore +=1;
 			    //addChild(eScore);
-			    callParts=new CallParts((this.x +(this.width/2)),450);
+			    /*//TODO: uncomment when particles are back
+                callParts=new CallParts((this.x +(this.width/2)),450);
                 myBall.addChild(callParts);
+                */
                 myBall.eScore.text="ENEMY SCORE:" + myBall.enemyScore;
 				if(myBall.enemyScore>=10){
                     myBall.enemyWin();
@@ -217,8 +219,10 @@ class TemporaryBall extends Ball{
 			//addChild(score);
 			if(noHurt==0){
                 myBall.playerScore +=1;
-			    callParts=new CallParts((this.x +(this.width/2)),50);
+			    /*//TODO: uncomment when particles are back
+                callParts=new CallParts((this.x +(this.width/2)),50);
                 myBall.addChild(callParts);
+                */
                 myBall.score.text="PLAYER SCORE:" + myBall.playerScore;
 				if(myBall.playerScore>=10){
                     myBall.playerWin();

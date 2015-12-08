@@ -1,13 +1,18 @@
 ﻿package com.ai.arkpong.model;
-import flash.display.MovieClip;
-//import fl.controls.Button;
-import flash.system.*;
-import flash.display.*;
-import flash.events.*;
-import flash.utils.Timer;
-import fl.controls.Button;
-import flash.geom.Point;
-import flash.geom.Rectangle;
+
+import com.ai.arkpong.control.Power;
+import com.ai.arkpong.control.Bricks;
+import com.ai.arkpong.control.PrimaryBall;
+import com.ai.arkpong.control.PrimaryBall;
+import com.ai.arkpong.view.ArkPongMovieClip;
+import openfl.display.*;
+import openfl.events.*;
+import openfl.utils.Timer;
+import haxe.ui.toolkit.controls.Button;
+import openfl.geom.Point;
+import openfl.geom.Rectangle;
+
+/*//TODO: uncomment when particles are back
 import org.flintparticles.common.counters.*;
 import org.flintparticles.common.displayObjects.*;
 import org.flintparticles.common.initializers.*;
@@ -16,33 +21,38 @@ import org.flintparticles.twoD.emitters.Emitter2D;
 import org.flintparticles.twoD.initializers.*;
 import org.flintparticles.twoD.renderers.*;
 import org.flintparticles.twoD.zones.*;
+import org.flintparticles.common.energyEasing.Bounce;
+*/
 
 
-  import flash.display.Bitmap;
-  import flash.display.Sprite;
-  import flash.events.MouseEvent;
-  import flash.geom.Point;
-  import flash.text.TextField;
-  import flash.display.MovieClip;
-  import fl.motion.easing.Back;
-  import org.flintparticles.common.energyEasing.Bounce;
+  import openfl.display.Bitmap;
+  import openfl.display.Sprite;
+  import openfl.events.MouseEvent;
+  import openfl.geom.Point;
+  import openfl.text.TextField;
+  import openfl.display.MovieClip;
+
   
 class InvisiBrick extends MovieClip  {
+    /*//TODO: uncomment when particles are back
 	private var emitter:Emitter2D;
+    private var renderer:DisplayObjectRenderer;
+    var ex:Explode;
+    */
 	//private var bitmap:Bitmap;
-	private var renderer:DisplayObjectRenderer;
+
 	private var stageRef:Stage;
 	//private var myRoot:MovieClip;
 	public var myBall:MovieClip;
 	public var myPaddle:MovieClip;
-	public var ball:Ball;
+	public var ball:PrimaryBall;
 	public var evilPaddle:MovieClip;
 	//public var //evilSight:MovieClip;
 	public var startButton:Button;
-	public var ePaddle:enemyPaddle;
+	public var ePaddle:AIPaddle;
 	var xCoord:Float;
 	var yCoord:Float;
-	var ex:Explode;
+
 	var myColor:Int=1;
 	var bitmapData:BitmapData;
 	var shortTimer:Timer=new Timer(200, 1);//this controls the response of bricks to being hit with the ball;if the timer is up the ball reverses x/y vectors.  Otherwise the brick is made inert as per usual, but the ball passes through it.  500 ms is probably too long
@@ -73,7 +83,7 @@ class InvisiBrick extends MovieClip  {
 	//Special stuff, like elemental properties and(maybe)particles
 	//private var ex:Explode=ArkPongMain Explode()//for now we'll try just one Explode object, ball.ex
 	
-	public function new(enPaddle:enemyPaddle=null,paddle:MovieClip=null,ball:MovieClip=null,theBall:Ball=null,ePaddle:MovieClip=null,startB:Button=null,myX:Float=0,myY:Float=0,level:Array<Dynamic>=null,bricksH:Bricks=null,stageR:Stage=null,mainR:ArkPongMain=null){
+	public function new(enPaddle:AIPaddle=null,paddle:MovieClip=null,ball:MovieClip=null,theBall:PrimaryBall=null,ePaddle:MovieClip=null,startB:Button=null,myX:Float=0,myY:Float=0,level:Array<Dynamic>=null,bricksH:Bricks=null,stageR:Stage=null,mainR:ArkPongMain=null){
 		//Constructor code
 		//trace("IB constructed!");
 		this.ePaddle=enPaddle;
@@ -263,7 +273,7 @@ class InvisiBrick extends MovieClip  {
 			//below finishes making object inert
 			this.height=0;
 			this.width=0;
-			this.scaleX 
+			this.scaleX;
 			this.visible=false;
 			this.isActivated=false;
 			
@@ -509,13 +519,15 @@ class InvisiBrick extends MovieClip  {
 			////if(!mainRef.isPaused){
 		//ball.ex=ArkPongMain Explode(this.x,this.y,myColor);
 		//ball.addChild(ball.ex);//problem is deifnitely with the fact that the parent this is removed almost instantly
-		ball.ex.showExplosion(this.x,this.y,myColor);
+		/*//TODO: uncomment when particles are back
+            ball.ex.showExplosion(this.x,this.y,myColor);
+            */
 		
 		//ball.bricksDestroyed +=1;
 		//trace("bricks destroyed " + ball.bricksDestroyed);
 		//ball.hitControl=0;
 		if(brickID=="power"){
-			ball.power=new powerUp(this.myPaddle,this.myBall,this.ball,this.evilPaddle,this.startButton,this.x,this.y,this.lvlCode,this.bricksHandle,this.stageRef,this.mainRef);
+			ball.power=new Power(this.myPaddle,this.myBall,this.ball,this.evilPaddle,this.startButton,this.x,this.y,this.lvlCode,this.bricksHandle,this.stageRef,this.mainRef);
 			ball.addChild(ball.power);
 		}
 		

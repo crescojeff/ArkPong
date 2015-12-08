@@ -1,12 +1,18 @@
 ﻿package com.ai.arkpong.model;
-import flash.display.MovieClip;
-//import fl.controls.Button;
-import flash.system.*;
-import flash.display.*;
-import flash.events.*;
-import flash.utils.Timer;
-import fl.controls.Button;
-import flash.geom.Point;
+
+import com.ai.arkpong.control.Power;
+import com.ai.arkpong.control.PrimaryBall;
+import com.ai.arkpong.control.Bricks;
+import com.ai.arkpong.control.PrimaryBall;
+import haxe.ui.toolkit.controls.Button;
+import openfl.display.MovieClip;
+import openfl.system.*;
+import openfl.display.*;
+import openfl.events.*;
+import openfl.utils.Timer;
+import openfl.geom.Point;
+
+/*//TODO: uncomment when particles are back
 import org.flintparticles.common.counters.*;
 import org.flintparticles.common.displayObjects.*;
 import org.flintparticles.common.initializers.*;
@@ -15,33 +21,39 @@ import org.flintparticles.twoD.emitters.Emitter2D;
 import org.flintparticles.twoD.initializers.*;
 import org.flintparticles.twoD.renderers.*;
 import org.flintparticles.twoD.zones.*;
+import org.flintparticles.common.energyEasing.Bounce;
+*/
 
 
-  import flash.display.Bitmap;
-  import flash.display.Sprite;
-  import flash.events.MouseEvent;
-  import flash.geom.Point;
-  import flash.text.TextField;
-  import flash.display.MovieClip;
-  import fl.motion.easing.Back;
-  import org.flintparticles.common.energyEasing.Bounce;
+  import openfl.display.Bitmap;
+  import openfl.display.Sprite;
+  import openfl.events.MouseEvent;
+  import openfl.geom.Point;
+  import openfl.text.TextField;
+  import openfl.display.MovieClip;
+
+
   
 class UnitBrick extends MovieClip  {
+	/*//TODO: uncomment when particles are back
 	private var emitter:Emitter2D;
-	//private var bitmap:Bitmap;
 	private var renderer:DisplayObjectRenderer;
+	var ex:Explode;
+	*/
+	//private var bitmap:Bitmap;
+
 	private var stageRef:Stage;
 	//private var myRoot:MovieClip;
 	public var myBall:MovieClip;
 	public var myPaddle:MovieClip;
-	public var ball:Ball;
+	public var ball:PrimaryBall;
 	public var evilPaddle:MovieClip;
 	public var evilSight:MovieClip;
 	public var startButton:Button;
-	public var ePaddle:enemyPaddle;
+	public var ePaddle:AIPaddle;
 	var xCoord:Float;
 	var yCoord:Float;
-	var ex:Explode;
+
 	var myColor:Int=1;
 	var bitmapData:BitmapData;
 	var shortTimer:Timer=new Timer(200, 1);//this controls the response of bricks to being hit with the ball;if the timer is up the ball reverses x/y vectors.  Otherwise the brick is made inert as per usual, but the ball passes through it.  500 ms is probably too long
@@ -67,7 +79,7 @@ class UnitBrick extends MovieClip  {
 	private static inline var COLOR_BLUE_BLOCK:Int=3;
 
 	
-	public function new(enPaddle:enemyPaddle=null,paddle:MovieClip=null,ball:MovieClip=null,theBall:Ball=null,ePaddle:MovieClip=null,startB:Button=null,myX:Float=0,myY:Float=0,level:Array<Dynamic>=null,bricksH:Bricks=null,stageR:Stage=null,mainR:ArkPongMain=null){
+	public function new(enPaddle:AIPaddle=null,paddle:MovieClip=null,ball:MovieClip=null,theBall:PrimaryBall=null,ePaddle:MovieClip=null,startB:Button=null,myX:Float=0,myY:Float=0,level:Array<Dynamic>=null,bricksH:Bricks=null,stageR:Stage=null,mainR:ArkPongMain=null){
 		// constructor code
 		this.ePaddle=enPaddle;
 		this.myBall=ball;
@@ -229,7 +241,7 @@ class UnitBrick extends MovieClip  {
 			//below finishes making object inert
 			this.height=0;
 			this.width=0;
-			this.scaleX 
+			this.scaleX = 0;
 			this.visible=false;
 			this.isActivated=false;
 			
@@ -339,7 +351,7 @@ class UnitBrick extends MovieClip  {
 			if(brickID=="block"){
 			  this.removeEventListener(Event.ENTER_FRAME, waitToDieBlock);
 			}
-			ball.startButton.removeEventListener(MouseEvent.CLICK, selfDestruct)
+			ball.startButton.removeEventListener(MouseEvent.CLICK, selfDestruct);
 			ball.bricksDestroyed +=1;
 			//trace("bricks destroyed:" + ball.bricksDestroyed);
 			//below finishes making object inert
@@ -405,7 +417,7 @@ class UnitBrick extends MovieClip  {
 	
 	 public function showExplosion()
 	{
- 
+ /*//TODO: uncomment when particles are back
  	 	//bitmap=ArkPongMain Image1();
 		//bitmap=this.bitmap;
   		///this.cacheAsBitmap=true;
@@ -430,7 +442,10 @@ class UnitBrick extends MovieClip  {
 		emitter.addAction(new Move());
 
 		emitter.start();
+         */
 		deathTimer.start();
+
+
  	 	
 	}
 	public function deathStart(event:TimerEvent){
@@ -467,13 +482,15 @@ class UnitBrick extends MovieClip  {
 			////if(!mainRef.isPaused){
 		//ball.ex=ArkPongMain Explode(xCoord,yCoord,myColor);
 		//ball.addChild(ball.ex);//problem is deifnitely with the fact that the parent this is removed almost instantly
-		ball.ex.showExplosion(xCoord,yCoord,myColor);
+		/*//TODO: uncomment when particles are back
+			ball.ex.showExplosion(xCoord,yCoord,myColor);
+			*/
 		
 		//ball.bricksDestroyed +=1;
 		//trace("bricks destroyed " + ball.bricksDestroyed);
 		//ball.hitControl=0;
 		if(brickID=="power"){
-			ball.power=new powerUp(this.myPaddle,this.myBall,this.ball,this.evilPaddle,this.startButton,this.xCoord,this.yCoord,this.lvlCode,this.bricksHandle,this.stageRef,this.mainRef);
+			ball.power=new Power(this.myPaddle,this.myBall,this.ball,this.evilPaddle,this.startButton,this.xCoord,this.yCoord,this.lvlCode,this.bricksHandle,this.stageRef,this.mainRef);
 			ball.addChild(ball.power);
 		}
 		

@@ -27,7 +27,7 @@ import openfl.events.*;
 import openfl.utils.Timer;
 import haxe.ui.toolkit.controls.Text;
 import haxe.ui.toolkit.controls.Button;
-import de.polygonal.core.ObjectPool;
+import de.polygonal.core.DynamicPool;
 
 class Bricks extends MovieClip {
 	public var myBall:MovieClip;

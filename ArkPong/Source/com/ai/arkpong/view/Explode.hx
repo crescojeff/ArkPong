@@ -1,4 +1,5 @@
-﻿package com.ai.arkpong.view;
+﻿/*//TODO: uncomment when particles are back
+package com.ai.arkpong.view;
 
   import org.flintparticles.common.counters.*;
 import org.flintparticles.common.displayObjects.*;
@@ -106,7 +107,7 @@ public function initExplode(){
 	rectz.top=-30;
 	rectz.right=30;
 	rectz.bottom=30;
-	deathz.zone=rectz
+	deathz.zone=rectz;
 	deathz.zoneIsSafe=true;
 	
 	//Set control paramaters, initializers, and actions for emitter
@@ -121,11 +122,7 @@ public function initExplode(){
 	
 	
 	//trace("renderer's positions in display conatienr is:" + this.getChildIndex(renderer));
-	/*
-	//Bind emitter to renderer and add renderer to stage as child of Explode
-	addChild(renderer);
-	renderer.addEmitter(emitter);
-	*/
+
 }
 
  public function showExplosion(xC:Float,yC:Float,theColor:Int)
@@ -262,77 +259,18 @@ public function initExplode(){
 		emitter.addAction(new DeathZone(new RectangleZone(-30, -30, 50, 70), true));
 		emitter.addAction(new Move());
 		
-		/*
-		var p2:Point=renderer.globalToLocal(ArkPongMain Point((this.x + 65),(this.y + 7)));
-  		//emitter2.addAction(ArkPongMain Explosion(8, p.x, p.y, 500));
-		emitter2.addAction(ArkPongMain Explosion(-8, -p2.x, -p2.y, -100));
-		emitter2.addAction(ArkPongMain DeathZone(ArkPongMain RectangleZone(-50, -50, 50, 50), true));
-		emitter2.addAction(ArkPongMain Move());
-		*/
+
 		
 		emitter.start();
 		//shortTimer2.addEventListener(TimerEvent.TIMER_COMPLETE, dieParts);
 		//shortTimer2.start();
 	}
 	
-	/*part of the terrible implementation of particles
-	public function dieParts(event:TimerEvent){ //destroys the Explode object after 2 seconds 
-		this.removeChild(renderer)
-		this.emitter.stop();
-		this.emitter=null;
-		if(shortTimer.hasEventListener(TimerEvent.TIMER_COMPLETE)){
-			shortTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, dieParts);
-		}
-		else if(shortTimer2.hasEventListener(TimerEvent.TIMER_COMPLETE)){
-			shortTimer2.removeEventListener(TimerEvent.TIMER_COMPLETE, dieParts);
-		}
-		else{
-			 shortTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, dieParts);
-			 shortTimer2.removeEventListener(TimerEvent.TIMER_COMPLETE, dieParts);
-		}
-		//shortTimer.reset();
-		//shortTimer.start();
-		this.parent.removeChild(this);
-	}
-	*/
+
 	
 	
 	
 	
-/*
-public function showExplosion2()
-{
- 
-  //bitmap=ArkPongMain Image1();
-  
-  emitter=ArkPongMain Emitter2D();
-  emitter.addAction(ArkPongMain DeathZone(ArkPongMain RectangleZone(-5, -5, 505, 355), true));
-  emitter.addAction(ArkPongMain Move());
-  //var particles:Array<Dynamic>=Particle2DUtils.createRectangleParticlesFromBitmapData(victim.bitmapData, 10, emitter.particleFactory, 56, 47);
-  //var particles:Particle2D=Particle2DUtils.createParticle2DFromDisplayObject(victim, null, emitter.particleFactory);
-					//var yo:Array<Dynamic>=Particle2DUtils.													  
-  //emitter.addExistingParticles(particles, false);
-  
-  
-  
-  renderer=ArkPongMain DisplayObjectRenderer();
-  addChild(renderer);
- /// var particles:Particle2D=Particle2DUtils.createParticle2DFromDisplayObject(victim, renderer, emitter.particleFactory);
-  renderer.addEmitter(emitter);
-  emitter.start();
-  
-  var p:Point=renderer.globalToLocal(ArkPongMain Point((victim.x + victim.width/2),(victim.y + victim.height/2)));
-  emitter.addAction(ArkPongMain Explosion(8, p.x, p.y, 500));
-  ////victim=null;//didn't work to remove reference to old bricks....
-  
-//  stage.addEventListener(MouseEvent.CLICK, explode, false, 0, true);
-}
-*/
-/*
-private function explode(ev:MouseEvent):Void
-{
-  var p:Point=renderer.globalToLocal(ArkPongMain Point(ev.stageX, ev.stageY));
-  emitter.addAction(ArkPongMain Explosion(8, p.x, p.y, 500));
-}
-*/
+
   }
+*/
