@@ -80,6 +80,8 @@ class UnitBrick extends MovieClip  {
 
 	
 	public function new(enPaddle:AIPaddle=null,paddle:MovieClip=null,ball:MovieClip=null,theBall:PrimaryBall=null,ePaddle:MovieClip=null,startB:Button=null,myX:Float=0,myY:Float=0,level:Array<Dynamic>=null,bricksH:Bricks=null,stageR:Stage=null,mainR:ArkPongMain=null){
+		super();
+
 		// constructor code
 		this.ePaddle=enPaddle;
 		this.myBall=ball;
@@ -479,7 +481,7 @@ class UnitBrick extends MovieClip  {
 			if(mainRef.mv_rTempBall !=null){
 				mainRef.mv_rTempBall.hitControl=0;
 			}
-			////if(!mainRef.isPaused){
+			////if(!mainRef.mv_bPaused){
 		//ball.ex=ArkPongMain Explode(xCoord,yCoord,myColor);
 		//ball.addChild(ball.ex);//problem is deifnitely with the fact that the parent this is removed almost instantly
 		/*//TODO: uncomment when particles are back
@@ -724,7 +726,7 @@ class UnitBrick extends MovieClip  {
 			//////////showExplosion();
 			////this.parent.removeChild(this);
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -791,7 +793,7 @@ class UnitBrick extends MovieClip  {
 			//////////showExplosion();
 			////this.parent.removeChild(this);
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -858,7 +860,7 @@ class UnitBrick extends MovieClip  {
 			//////////showExplosion();
 			////this.parent.removeChild(this);
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -872,7 +874,7 @@ class UnitBrick extends MovieClip  {
 		//Hit by just a ninja star...
 		if(this.hitTestObject(mainRef.starsArray[starHit])&& !this.hitTestObject(myBall)&& !this.hitTestObject(mainRef.mv_rTempBall)){//START 16
 			trace("hey!!!!!!!RED");
-			if(!mainRef.isPaused){//START 17
+			if(!mainRef.mv_bPaused){//START 17
 			//myPaddle.width +=5;
 			//evilPaddle.width -=5;
 			deathTimer.reset();
@@ -940,7 +942,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			
@@ -957,7 +959,7 @@ class UnitBrick extends MovieClip  {
 		//Hit by just a ninja star...
 		if(this.hitTestObject(mainRef.starsArray[starHit])){
 			trace("hey!!!!!!!RED");
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			//myPaddle.width +=5;
 			//evilPaddle.width -=5;
 			deathTimer.reset();
@@ -1025,7 +1027,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			
@@ -1061,7 +1063,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1120,7 +1122,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1155,7 +1157,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1214,7 +1216,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1280,7 +1282,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -1292,7 +1294,7 @@ class UnitBrick extends MovieClip  {
 		}
 		if(this.hitTestObject(mainRef.starsArray[starHit])){
 			trace("hey!!!!!!!RED");
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			//myPaddle.width +=5;
 			//evilPaddle.width -=5;
 			deathTimer.reset();
@@ -1330,7 +1332,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1389,7 +1391,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1458,7 +1460,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}//END 12 if either control==2
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -1505,7 +1507,7 @@ class UnitBrick extends MovieClip  {
 			}//END 12 if either control==2
 			
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -1552,7 +1554,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}//END 12 if either control==2
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -1566,7 +1568,7 @@ class UnitBrick extends MovieClip  {
 		//Hit by just a ninja star...
 		if(this.hitTestObject(mainRef.starsArray[starHit])&& !this.hitTestObject(myBall)&& !this.hitTestObject(mainRef.mv_rTempBall)){//START 16
 			trace("hey!!!!!!!Green");
-			if(!mainRef.isPaused){//START 17
+			if(!mainRef.mv_bPaused){//START 17
 			
 			deathTimer.reset();
 			deathTimer.start();
@@ -1617,7 +1619,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			
@@ -1629,7 +1631,7 @@ class UnitBrick extends MovieClip  {
 		//Hit by just a ninja star...
 		if(this.hitTestObject(mainRef.starsArray[starHit])){
 			trace("hey!!!!!!!Green");
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			
 			deathTimer.reset();
 			deathTimer.start();
@@ -1680,7 +1682,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			
@@ -1711,7 +1713,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1750,7 +1752,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1780,7 +1782,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1819,7 +1821,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1871,7 +1873,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -1883,7 +1885,7 @@ class UnitBrick extends MovieClip  {
 		}
 		if(this.hitTestObject(mainRef.starsArray[starHit])){
 			trace("hey!!!!!!!Green");
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			
 			deathTimer.reset();
 			deathTimer.start();
@@ -1915,7 +1917,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -1954,7 +1956,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -2023,7 +2025,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}//END 12 if either control==2
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -2070,7 +2072,7 @@ class UnitBrick extends MovieClip  {
 			}//END 12 if either control==2
 			
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -2117,7 +2119,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}//END 12 if either control==2
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -2131,7 +2133,7 @@ class UnitBrick extends MovieClip  {
 		//Hit by just a ninja star...
 		if(this.hitTestObject(mainRef.starsArray[starHit])&& !this.hitTestObject(myBall)&& !this.hitTestObject(mainRef.mv_rTempBall)){//START 16
 			trace("hey!!!!!!!blue");
-			if(!mainRef.isPaused){//START 17
+			if(!mainRef.mv_bPaused){//START 17
 			
 			deathTimer.reset();
 			deathTimer.start();
@@ -2182,7 +2184,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			
@@ -2194,7 +2196,7 @@ class UnitBrick extends MovieClip  {
 		//Hit by just a ninja star...
 		if(this.hitTestObject(mainRef.starsArray[starHit])){
 			trace("hey!!!!!!!blue");
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			
 			deathTimer.reset();
 			deathTimer.start();
@@ -2245,7 +2247,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			
@@ -2276,7 +2278,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -2315,7 +2317,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -2345,7 +2347,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -2385,7 +2387,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -2437,7 +2439,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -2449,7 +2451,7 @@ class UnitBrick extends MovieClip  {
 		}
 		if(this.hitTestObject(mainRef.starsArray[starHit])){
 			trace("hey!!!!!!!blue");
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			
 			deathTimer.reset();
 			deathTimer.start();
@@ -2481,7 +2483,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -2520,7 +2522,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -2589,7 +2591,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}//END 12 if either control==2
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -2636,7 +2638,7 @@ class UnitBrick extends MovieClip  {
 			}//END 12 if either control==2
 			
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -2683,7 +2685,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}//END 12 if either control==2
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -2697,7 +2699,7 @@ class UnitBrick extends MovieClip  {
 		//Hit by just a ninja star...
 		if(this.hitTestObject(mainRef.starsArray[starHit])&& !this.hitTestObject(myBall)&& !this.hitTestObject(mainRef.mv_rTempBall)){//START 16
 			trace("hey!!!!!!!power");
-			if(!mainRef.isPaused){//START 17
+			if(!mainRef.mv_bPaused){//START 17
 			
 			deathTimer.reset();
 			deathTimer.start();
@@ -2748,7 +2750,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			
@@ -2760,7 +2762,7 @@ class UnitBrick extends MovieClip  {
 		//Hit by just a ninja star...
 		if(this.hitTestObject(mainRef.starsArray[starHit])){
 			trace("hey!!!!!!!power");
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			
 			deathTimer.reset();
 			deathTimer.start();
@@ -2811,7 +2813,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			
@@ -2842,7 +2844,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -2881,7 +2883,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -2911,7 +2913,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -2950,7 +2952,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -3002,7 +3004,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.numStars--;
@@ -3014,7 +3016,7 @@ class UnitBrick extends MovieClip  {
 		}
 		if(this.hitTestObject(mainRef.starsArray[starHit])){
 			trace("hey!!!!!!!power");
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			
 			deathTimer.reset();
 			deathTimer.start();
@@ -3046,7 +3048,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -3085,7 +3087,7 @@ class UnitBrick extends MovieClip  {
 				evilSight.x=evilPaddle.x +(evilPaddle.width/2);
 			}
 			
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			}
@@ -3174,7 +3176,7 @@ class UnitBrick extends MovieClip  {
 			//////////showExplosion();
 			////this.parent.removeChild(this);
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			 if(ball.punchPower){
 				deathTimer.reset();//we don't want the block brick to die in the normal circumstance
 				deathTimer.start();//only if punchpower is on.
@@ -3247,7 +3249,7 @@ class UnitBrick extends MovieClip  {
 			//////////showExplosion();
 			////this.parent.removeChild(this);
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			if(ball.punchPower){
 				deathTimer.reset();//we don't want the block brick to die in the normal circumstance
 				deathTimer.start();//only if punchpower is on.
@@ -3320,7 +3322,7 @@ class UnitBrick extends MovieClip  {
 			//////////showExplosion();
 			////this.parent.removeChild(this);
 			
-			if(!mainRef.isPaused){//START 15 
+			if(!mainRef.mv_bPaused){//START 15
 			if(ball.punchPower){
 				deathTimer.reset();//we don't want the block brick to die in the normal circumstance
 				deathTimer.start();//only if punchpower is on.
@@ -3339,7 +3341,7 @@ class UnitBrick extends MovieClip  {
 		//Hit by just a ninja star...
 		if(this.hitTestObject(mainRef.starsArray[starHit])&& !this.hitTestObject(myBall)&& !this.hitTestObject(mainRef.mv_rTempBall)){//START 16
 			trace("hey!!!!!!!block");
-			if(!mainRef.isPaused){//START 17
+			if(!mainRef.mv_bPaused){//START 17
 			//myPaddle.width +=5;
 			//evilPaddle.width -=5;
 			//deathTimer.reset();//no case in which ninja star should kill a block brick
@@ -3406,7 +3408,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			
@@ -3422,7 +3424,7 @@ class UnitBrick extends MovieClip  {
 		//Hit by just a ninja star...
 		if(this.hitTestObject(mainRef.starsArray[starHit])){
 			trace("hey!!!!!!!RED");
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			//myPaddle.width +=5;
 			//evilPaddle.width -=5;
 			deathTimer.reset();
@@ -3492,7 +3494,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			if(ball.punchPower){
 				deathTimer.reset();//we don't want the block brick to die in the normal circumstance
 				deathTimer.start();//only if punchpower is on.
@@ -3534,7 +3536,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();//already know punchpower is on here
 			deathTimer.start();
 			}
@@ -3595,7 +3597,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			if(ball.punchPower){
 				deathTimer.reset();//we don't want the block brick to die in the normal circumstance
 				deathTimer.start();//only if punchpower is on.
@@ -3637,7 +3639,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();//we know punchPower is true here
 			deathTimer.start();
 			}
@@ -3699,7 +3701,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			if(ball.punchPower){
 				deathTimer.reset();//we don't want the block brick to die in the normal circumstance
 				deathTimer.start();//only if punchpower is on.
@@ -3772,7 +3774,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			if(ball.punchPower){
 				deathTimer.reset();//we don't want the block brick to die in the normal circumstance
 				deathTimer.start();//only if punchpower is on.
@@ -3789,7 +3791,7 @@ class UnitBrick extends MovieClip  {
 		}
 		if(this.hitTestObject(mainRef.starsArray[starHit])){
 			trace("hey!!!!!!!block");
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			//myPaddle.width +=5;
 			//evilPaddle.width -=5;
 			//deathTimer.reset();//in no case should the ninja stars destory a block brick
@@ -3829,7 +3831,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();//already know punchpower is on here so no additional controls needed
 			deathTimer.start();
 			}
@@ -3890,7 +3892,7 @@ class UnitBrick extends MovieClip  {
 			//var e:Explode=ArkPongMain Explode(this);//passing this reference to the brick to die Into Explode keeps it from being gc'd!
 			//////////showExplosion();
 			////this.parent.removeChild(this);
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 				if(ball.punchPower){
 					deathTimer.reset();//we don't want the block brick to die in the normal circumstance
 					deathTimer.start();//only if punchpower is on.
@@ -3908,7 +3910,7 @@ class UnitBrick extends MovieClip  {
 	   }
 		/*
 		if(this.hitTestObject(mainRef.ninjaStars)){
-			if(!mainRef.isPaused){
+			if(!mainRef.mv_bPaused){
 			deathTimer.reset();
 			deathTimer.start();
 			mainRef.removeChild(mainRef.ninjaStars);

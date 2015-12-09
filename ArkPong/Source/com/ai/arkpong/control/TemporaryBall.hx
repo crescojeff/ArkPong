@@ -56,7 +56,9 @@ class TemporaryBall extends Ball{
 	
 	
 	public function new(paddle:MovieClip,ball:PrimaryBall,ePaddle:MovieClip,stageRef:Stage,eSight:MovieClip,mainR:ArkPongMain){
-		
+
+        super();
+
 		this.myBall=ball;
 		this.myPaddle=paddle;
 		this.evilPaddle=ePaddle;
@@ -133,8 +135,7 @@ class TemporaryBall extends Ball{
 		trace("ball2 scale x:" + this.scaleX);
 		trace("ball2 scale y:" + this.scaleY);
 		*/
-		this.x=this.x;
-		this.y=this.y;
+
 		this.x +=1.51 * ballXSpeed;
 		this.y +=1.51 * ballYSpeed;
 		

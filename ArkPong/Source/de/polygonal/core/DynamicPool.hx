@@ -173,7 +173,7 @@ class DynamicPool
 	 * @param C	The class to create for object node in the pool.
 	 *			 This overwrites the current factory.
 	 */
-	public function allocate(size:Int, C:Class=null):Void
+	public function allocate(size:Int, C:Class<Dynamic>=null):Void
 	{
 		deconstruct();
 		
@@ -208,7 +208,7 @@ class DynamicPool
 	 * @param func The function's name.
 	 * @param args The function's arguments.
 	 */
-	public function initialze(func:String, args:Array):Void
+	public function initialze(func:String, args:Array<Dynamic>):Void
 	{
 		var n:ObjNode=_head;
 		while(n)

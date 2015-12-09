@@ -33,7 +33,10 @@ class Paddle extends ArkPongMovieClip {
 	//initObject(myPaddle);
 	
 	public function new(paddle:MovieClip,ball:MovieClip,stageRef:Stage){
-		this.myPaddle=paddle;
+
+        super();
+
+        this.myPaddle=paddle;
 		this.myBall=ball;
 		this.theStage=stageRef;
 		myPaddle.addEventListener(Event.ENTER_FRAME, paddleMotion);

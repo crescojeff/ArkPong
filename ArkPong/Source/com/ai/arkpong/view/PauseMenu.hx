@@ -11,6 +11,7 @@ class PauseMenu extends ArkPongMovieClip{
     private var mv_rResetButton:Button;
 
     public function new() {
+        super();
     }
 
     public function getResumeButton():Button{

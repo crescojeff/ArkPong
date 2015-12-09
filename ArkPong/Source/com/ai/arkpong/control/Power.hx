@@ -18,7 +18,7 @@ class Power extends MovieClip {
 	public var startButton:Button;
 	var xCoord:Float;
 	var yCoord:Float;
-	var lvlCode:Array<Dynamic>;
+	var lvlCode:Array<Int>;
 	var bricksHandle:Bricks;
 	var controlAtHit:Int;
 	var theImage:String;
@@ -31,7 +31,7 @@ class Power extends MovieClip {
 	var mainRef:ArkPongMain;
 	var randomNum:Float;
 	
-	public function new(paddle:Paddle,ball:PrimaryBall,theBall:PrimaryBall,ePaddle:AIPaddle,startB:Button,myX:Float,myY:Float,level:Array,bricksH:Bricks,stageR:Stage,mainR:ArkPongMain){
+	public function new(paddle:Paddle,ball:PrimaryBall,theBall:PrimaryBall,ePaddle:AIPaddle,startB:Button,myX:Float,myY:Float,level:Array<Int>,bricksH:Bricks,stageR:Stage,mainR:ArkPongMain){
 		this.myBall=ball;
 		this.myPaddle=paddle;
 		this.ball=theBall;
@@ -57,12 +57,12 @@ class Power extends MovieClip {
 	}
 	public function drop(event:Event){
 		//trace("falling power");//this goes on for a while... may wish to look Into it
-		if(mainRef.isReset){
-			mainRef.isReset=false;
+		if(mainRef.isReset()){
+			mainRef.setReset(false);
 			for(i in 0...this.numChildren){
 					if(this.getChildAt(i)!=null){
 						this.removeChildAt(i);
-						mainRef.myPowerCount--;
+						mainRef.decPlayerPowerCount();
 					}
 				}
 			this.removeEventListener(Event.ENTER_FRAME, drop);
@@ -70,7 +70,7 @@ class Power extends MovieClip {
 			this.parent.removeChild(this);
 			appeared=false;
 		}
-	if(!mainRef.isPaused){
+	if(!mainRef.isPaused()){
 	  if(appeared){
 		if(controlAtHit==0){//no idea who was in control, award power with coin flip
 			if(Math.random()<0.5){
@@ -100,62 +100,62 @@ class Power extends MovieClip {
 		if(randomNum<.15){
 		//if(randomNum<.25){
 			//myPower=ArkPongMain powerFire();
-			mainRef.getPlayerPower()="fire";
+			mainRef.setPlayerPower("fire");
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
-			mainRef.myPowerCount++;
+			mainRef.incPlayerPowerCount();
 		}
 
 		if(randomNum>=.15 && randomNum<.3){
 			//myPower=ArkPongMain powerFreeze();
-			mainRef.getPlayerPower()="freeze";
+			mainRef.setPlayerPower("freeze");
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
-			mainRef.myPowerCount++;
+			mainRef.incPlayerPowerCount();
 		}
 		if(randomNum>=.3 && randomNum<.45){
 
 		//if(randomNum>=.75){
 			//myPower=ArkPongMain powerNinja();
-			mainRef.getPlayerPower()="ninja";
+			mainRef.setPlayerPower("ninja");
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
-			mainRef.myPowerCount++;
+			mainRef.incPlayerPowerCount();
 		}
 
 		//}
 		if(randomNum>=.45 && randomNum<.6){
 
 			//myPower=ArkPongMain powerSplit();
-			mainRef.getPlayerPower()="split";
+			mainRef.setPlayerPower("split");
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
-			mainRef.myPowerCount++;
+			mainRef.incPlayerPowerCount();
 
 		}
 
 		if(randomNum>=.6 && randomNum<.75){
 
 			//myPower=ArkPongMain powerPunch();
-			mainRef.getPlayerPower()="punch";
+			mainRef.setPlayerPower("punch");
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
-			mainRef.myPowerCount++;
+			mainRef.incPlayerPowerCount();
 
 
 		}
 		if(randomNum>=.75){
 			//myPower=ArkPongMain powerGold();
-			mainRef.getPlayerPower()="gold";
+			mainRef.setPlayerPower("gold");
 			myPower.x=27.5;
 			myPower.y=0;
 			addChild(myPower);
-			mainRef.myPowerCount++;
+			mainRef.incPlayerPowerCount();
 		}
 
 		appeared=true;
@@ -223,12 +223,12 @@ class Power extends MovieClip {
 		//this function will see what the theImage property was set to, and define an effect based on it that will
 		//occur when the powerUp symbol hits either myPaddle or evilPaddle.
 		//trace("powerY" + myPower.y);
-		if(mainRef.isReset){
-			mainRef.isReset=false;
+		if(mainRef.isReset()){
+			mainRef.setReset(false);
 			for(i in 0...this.numChildren){
 					if(this.getChildAt(i)!=null){
 						this.removeChildAt(i);
-						mainRef.myPowerCount--;
+						mainRef.decPlayerPowerCount();
 					}
 				}
 			this.removeEventListener(Event.ENTER_FRAME, drop);
@@ -237,7 +237,7 @@ class Power extends MovieClip {
 			appeared=false;
 
 		}
-		if(!mainRef.isPaused){
+		if(!mainRef.isPaused()){
 		if(appeared){
 		if(myPower.hitTestObject(myPaddle)|| myPower.hitTestObject(evilPaddle)|| myPower.y>=((450 - yCoord)+ 35)|| myPower.y<=((-400 + yCoord)- 35)){
 			if(myPower.hitTestObject(myPaddle)){
@@ -255,35 +255,35 @@ class Power extends MovieClip {
 				*/
 
 				//light up the relevant power under player Powers
-				//provided mainRef.playerPowerCount is<=2.
-			if(mainRef.playerPowerCount<2 && mainRef.getPlayerPower() !="gold"){
+				//provided mainRef.getPlayerPowerCount() is<=2.
+			if(mainRef.getPlayerPowerCount()<2 && mainRef.getPlayerPower() !="gold"){
 				//mainRef.incPlayerPowerCount();
 				trace("alpha:" + mainRef.get_abilityFire_Player().alpha);
-				trace("pPC:" + mainRef.playerPowerCount);
+				trace("pPC:" + mainRef.getPlayerPowerCount());
 				if(mainRef.getPlayerPower()=="fire" && mainRef.get_abilityFire_Player().alpha<1){
 					mainRef.get_abilityFire_Player().alpha=1;
 					mainRef.incPlayerPowerCount();
-					trace("pPC:" + mainRef.playerPowerCount);
+					trace("pPC:" + mainRef.getPlayerPowerCount());
 				}
 				if(mainRef.getPlayerPower()=="freeze" && mainRef.get_abilityFreeze_Player().alpha<1){
 					mainRef.get_abilityFreeze_Player().alpha=1;
 					mainRef.incPlayerPowerCount();
-					trace("pPC:" + mainRef.playerPowerCount);
+					trace("pPC:" + mainRef.getPlayerPowerCount());
 				}
 				if(mainRef.getPlayerPower()=="ninja" && mainRef.get_abilityNinjaStar_Player().alpha<1){
 					mainRef.get_abilityNinjaStar_Player().alpha=1;
 					mainRef.incPlayerPowerCount();
-					trace("pPC:" + mainRef.playerPowerCount);
+					trace("pPC:" + mainRef.getPlayerPowerCount());
 				}
 				if(mainRef.getPlayerPower()=="punch" && mainRef.get_abilityPunchThrough_Player().alpha<1){
 					mainRef.get_abilityPunchThrough_Player().alpha=1;
 					mainRef.incPlayerPowerCount();
-					trace("pPC:" + mainRef.playerPowerCount);
+					trace("pPC:" + mainRef.getPlayerPowerCount());
 				}
 				if(mainRef.getPlayerPower()=="split" && mainRef.get_abilitySplit_Player().alpha<1){
 					mainRef.get_abilitySplit_Player().alpha=1;
 					mainRef.incPlayerPowerCount();
-					trace("pPC:" + mainRef.playerPowerCount);
+					trace("pPC:" + mainRef.getPlayerPowerCount());
 				}
 			}
 				if(mainRef.getPlayerPower()=="gold"){
@@ -293,14 +293,14 @@ class Power extends MovieClip {
 					if(ball.playerScore>=10){
 						ball.playerWin();
 					}
-					mainRef.getPlayerPower()="";
+					mainRef.setPlayerPower("");
 				}
 
 				//removing the myPower graphic
 				for(i in 0...this.numChildren){
 					if(this.getChildAt(i)!=null){
 						this.removeChildAt(i);
-						mainRef.myPowerCount--;
+						mainRef.decPlayerPowerCount();
 					}
 				}
 				//this.parent.removeChild(this);
@@ -368,7 +368,7 @@ class Power extends MovieClip {
 				for(i in 0...this.numChildren){
 					if(this.getChildAt(i)!=null){
 						this.removeChildAt(i);
-						mainRef.myPowerCount--;
+						mainRef.decPlayerPowerCount();
 					}
 				}
 				//this.parent.removeChild(this);
@@ -378,7 +378,7 @@ class Power extends MovieClip {
 				for(i in 0...this.numChildren){
 					if(this.getChildAt(i)!=null){
 						this.removeChildAt(i);
-						mainRef.myPowerCount--;
+						mainRef.decPlayerPowerCount();
 					}
 				}
 				//this.parent.removeChild(this);
@@ -388,7 +388,7 @@ class Power extends MovieClip {
 				for(i in 0...this.numChildren){
 					if(this.getChildAt(i)!=null){
 						this.removeChildAt(i);
-						mainRef.myPowerCount--;
+						mainRef.decPlayerPowerCount();
 					}
 				}
 				//this.parent.removeChild(this);

@@ -7,7 +7,7 @@ import flash.events.Event;
 class FlyingNinja extends MovieClip {
 	public var evilPaddle:MovieClip;
 	var ball:PrimaryBall;
-	var mainRef;
+	var mainRef:ArkPongMain;
 
 	public function flyingNinja(ePaddle:MovieClip,theBall:PrimaryBall,mainR:ArkPongMain){
 		this.evilPaddle=ePaddle;

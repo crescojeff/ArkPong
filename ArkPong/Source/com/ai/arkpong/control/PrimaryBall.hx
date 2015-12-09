@@ -2,7 +2,8 @@
 import com.ai.arkpong.view.ArkPongMovieClip;
 //import com.ai.arkpong.view.Explode;//TODO: uncomment when particles are back
 import haxe.ui.toolkit.controls.Button;
-import openfl.display.*;
+import haxe.ui.toolkit.core.DisplayObjectContainer;
+import openfl.display.Stage;
 import openfl.events.*;
 import openfl.display.MovieClip;
 import haxe.ui.toolkit.controls.Text;
@@ -14,23 +15,23 @@ import haxe.ui.toolkit.controls.Button;
 class PrimaryBall extends Ball {
 	
 	//These variables are needed for moving the ball
-	var ballXSpeed:Float=5.5;//X Speed of the Ball
-	var ballYSpeed:Float=5.5;//Y Speed of the Ball
-	var leftWallHit:Int=0;//monitors hits in-a-row on left wall
-	var rightWallHit:Int=0;//monitors hits in-a-row on right wall
-	var topHit:Int=0;//monitors hits in-a-row on ceiling
-	var bottomHit:Int=0;//monitors hits in-a-row on floor [probably not needed]
-	var leftWallHit2:Int=0;//monitors hits in-a-row on left wall
-	var rightWallHit2:Int=0;//monitors hits in-a-row on right wall
-	var topHit2:Int=0;//monitors hits in-a-row on ceiling
-	var bottomHit2:Int=0;//monitors hits in-a-row on floor [probably not needed]
-	var theBackground:ArkPongMovieClip = new ArkPongMovieClip();//ArkPongMain myBackground();
+    public var ballXSpeed:Float=5.5;//X Speed of the Ball
+    public var ballYSpeed:Float=5.5;//Y Speed of the Ball
+    public var leftWallHit:Int=0;//monitors hits in-a-row on left wall
+    public var rightWallHit:Int=0;//monitors hits in-a-row on right wall
+    public var topHit:Int=0;//monitors hits in-a-row on ceiling
+    public var bottomHit:Int=0;//monitors hits in-a-row on floor [probably not needed]
+    public var leftWallHit2:Int=0;//monitors hits in-a-row on left wall
+    public var rightWallHit2:Int=0;//monitors hits in-a-row on right wall
+    public var topHit2:Int=0;//monitors hits in-a-row on ceiling
+    public var bottomHit2:Int=0;//monitors hits in-a-row on floor [probably not needed]
+    public var theBackground:ArkPongMovieClip = new ArkPongMovieClip();//ArkPongMain myBackground();
 
     /*//TODO: uncomment when particles are back
 	var ex:Explode=new Explode();
     */
-	var power:Power;
-	var trackLvl:Int;
+    public var power:Power;
+    public var trackLvl:Int;
 	//var splitTimer:Timer=ArkPongMain Timer(5000, 1);
 	//var mainRef:ArkPongMain=ArkPongMain ArkPongMain();//causes a $%&&*(infinite loop!!
 	//var h:Graphics=ArkPongMain Graphics();
@@ -44,35 +45,37 @@ class PrimaryBall extends Ball {
 	public var countHit:Int;
 	public var hitControl:Int=0;
 	//var myBall2:MovieClip;
-	var playerHP:Float=100;
-	var enemyHP:Float=100;
-	var playerScore:Int=0;
-	var enemyScore:Int=0;
+    public var playerHP:Float=100;
+    public var enemyHP:Float=100;
+    public var playerScore:Int=0;
+    public var enemyScore:Int=0;
 	public var score:Text;//the player's score label
 	public var eScore:Text;//the enemy's score label
-	var control:Int=0;	//this variable will be used to track which paddle the ball just bounced off
-	var bricksDestroyed:Int=0;//incremented when a brick is in its 'death' function, currently before the brick is removed from displaylist.  should be fine. 6/2/2011
-	var factor2:Float=0.8;
+    public var control:Int=0;	//this variable will be used to track which paddle the ball just bounced off
+    public var bricksDestroyed:Int=0;//incremented when a brick is in its 'death' function, currently before the brick is removed from displaylist.  should be fine. 6/2/2011
+    public var factor2:Float=0.8;
 	public var xLocations:Array<Dynamic>=new Array();
-	var noHurtTimer:Timer=new Timer(500,1);
-	var noHurt:Int=0;
+    public var noHurtTimer:Timer=new Timer(500,1);
+    public var noHurt:Int=0;
 	public var startButton:Button;
-	var theStage:Stage;
-	var doomCount:Int=0;//zero in game, 1 when someone wins, then reinitialized to zero on restart
-	var winnerLabel:Text=new Text();
-	var killAll:Int=0;
+    public var theStage:Stage;
+    public var doomCount:Int=0;//zero in game, 1 when someone wins, then reinitialized to zero on restart
+    public var winnerLabel:Text=new Text();
+    public var killAll:Int=0;
 	//var callParts:CallParts;//reuse the Explode object!  Just Introduce a ArkPongMain function in Explode to govern the type of particle effect you want here IF NECESSARY
-	var stuckTimer:Timer=new Timer(250,1);
-	var rebuild:Bool=false;
-	var punchPower:Bool=false;
-	var moveTimer:Timer=new Timer(1000/30);//timer to control ball motion instead of enterFrame...
-	var levelSize:Int;//to be instant6iated/set dynamically via Bricks once a level is generated
-	var winner:Int;//set when a player wins or loses. 1=player win 2=enemy win
+    public var stuckTimer:Timer=new Timer(250,1);
+    public var rebuild:Bool=false;
+    public var punchPower:Bool=false;
+    public var moveTimer:Timer=new Timer(1000/30);//timer to control ball motion instead of enterFrame...
+    public var levelSize:Int;//to be instant6iated/set dynamically via Bricks once a level is generated
+    public var winner:Int;//set when a player wins or loses. 1=player win 2=enemy win
 	////ball2.y=(factor2 * ball2.y)+((1-factor2)* position2);
 	///////var shortTimer:Timer=ArkPongMain Timer(500, 1);
 	//var brickRed:MovieClip;
 	
 	public function new(paddle:MovieClip,ball:MovieClip,ePaddle:MovieClip,startB:Button,stageRef:Stage,eSight:MovieClip){
+        super();
+
         theBackground.loadImage("assets/wood_wavy_BG.jpg");
 
         score=new Text();
@@ -504,7 +507,15 @@ class PrimaryBall extends Ball {
 					winnerLabel.y=100;
 					winnerLabel.width=150;
 					winnerLabel.text="Computer Wins!";
-					addChild(winnerLabel);
+                    var dispContainer:DisplayObjectContainer = new haxe.ui.toolkit.core.DisplayObjectContainer();
+					dispContainer.addChild(winnerLabel);
+                    /*
+                    So that seems to work for the addChild()'ing of haxe.ui display objects.
+                    That means we have two choices --
+                    1. Tie ourselves to haxe.ui display system
+                    2. Try to have our own display components implement haxe.ui's IDisplayObject
+                     */
+                    addChild(winnerLabel);
 					myBall.x=275;
 					evilPaddle.x=275;
 					evilSight.x=evilPaddle.x +(evilPaddle.width/2);
@@ -522,7 +533,7 @@ class PrimaryBall extends Ball {
 					winnerLabel.y=100;
 					winnerLabel.width=150;
 					winnerLabel.text="You Win!";
-					addChild(winnerLabel);
+					addChild(winnerLabel);//TODO: getting a compile error here that actually looks real -- I think haxeui components, as haxe.ui.toolkit.core.DisplayObject instances, need to be addChild()'d to a haxe.ui.toolkit.core.DisplayObjectContainer rather than any of the OpenFL flash-y display object containers like OpenFL movieclip
 					myBall.x=275;
 					evilPaddle.x=275;
 					evilSight.x=evilPaddle.x +(evilPaddle.width/2);

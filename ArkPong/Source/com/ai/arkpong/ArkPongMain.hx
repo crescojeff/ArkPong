@@ -88,22 +88,23 @@ import org.coretween.Tween;
 
 
 class ArkPongMain extends MovieClip{
+    //TODO: oh criminey... well, make the fields private again, and replace the direct field accesses from every-damn-where with getters/setters
 	//public var myPaddle:MovieClip;
 	public var mv_rMainBall:PrimaryBall;
 	//public var evilSight:MovieClip;//causes cosntructors below to send a null value to manager objects -- probably doesn't matter since eSight was never actually used, but it should be noted in case soemthing weird happens
 	//public var stageRef:Stage;
 	//var ball:PrimaryBall;//TODO: why were there both myBall and ball variables?
-	var mv_rPlayerPaddle:Paddle;
-	var bricks:Bricks;
+    public var mv_rPlayerPaddle:Paddle;
+    public var bricks:Bricks;
 	//var numBricks:Array<Dynamic>;
 	public var evilPaddle:MovieClip;
 	public var theBackground:MovieClip;
-	var ePaddle:AIPaddle;
-	var startButton:Button;
-	var endButton:Button;
-	var startButtonClicked:Int=0;
-	var myPauseButton:Button;
-	var isPaused:Bool=false;
+    public var ePaddle:AIPaddle;
+    public var startButton:Button;
+    public var endButton:Button;
+    public var startButtonClicked:Int=0;
+    public var myPauseButton:Button;
+    public var mv_bPaused:Bool=false;
 	//public var myMenu:MovieClip;
 	public var myMenuUI:PauseMenu;
 	public var resumePlay:Button;
@@ -111,33 +112,33 @@ class ArkPongMain extends MovieClip{
 	//var theLayers:Array<Dynamic>;
 	//var menuLayer:Layer;
 	public var menuButton:Button;
-	var isReset:Bool=false;
-	var myPowerCount:Int=0;//TODO: wtf?  why are there two power count fields?
-	var power:String;// power just released.  Once there are multiple powerbricks on the level, this will need to be an array or LL of strings...
-	
-	var fireBall:ArkPongMovieClip=new ArkPongMovieClip();//these two are projectiles that get instantiated and destroyed repeatedly
-	var enemyFireBall:ArkPongMovieClip=new ArkPongMovieClip();// the enemy's fireball
+    public var mv_bReset:Bool=false;
+	//var myPowerCount:Int=0;//TODO: wtf?  why are there two power count fields?
+    public var power:String;// power just released.  Once there are multiple powerbricks on the level, this will need to be an array or LL of strings...
+
+    public var fireBall:ArkPongMovieClip=new ArkPongMovieClip();//these two are projectiles that get instantiated and destroyed repeatedly
+    public var enemyFireBall:ArkPongMovieClip=new ArkPongMovieClip();// the enemy's fireball
 	//var ninjaStars:flyingNinja;//these two are projectiles that get instantiated and destroyed repeatedly
-	var starsArray:Array<Dynamic>=new Array();//this array can hold the ninjaStars objects such that they will be indexed and therefore separately addressable
-	var numStars:Int=0;
+    public var starsArray:Array<Dynamic>=new Array();//this array can hold the ninjaStars objects such that they will be indexed and therefore separately addressable
+    public var numStars:Int=0;
 	//var callParts:CallParts;//TODO: uncomment when particles are back
-	var freezeTimer:Timer;
-	var freezeTimer2:Timer;
+    public var freezeTimer:Timer;
+    public var freezeTimer2:Timer;
 	/*//TODO: uncomment when tweening is back
     var myTweenAlpha:Tween;
 	var myTweenY:Tween;
     */
 	/////var splitTimer:Timer=ArkPongMain Timer(5000, 1);//moved to ball2 now
 	public var mv_rTempBall:TemporaryBall;
-	var playerPowerCount:Int=0;//the playerPowerCount and enemyPowerCount varaibles track how many powerups the player and enemy have accumluated, respectively.
-	var enemyPowerCount:Int=0;//each is allowed up to two powers at a time, but no more.
-	var ball2Counter:Int=0;
-	var date:Date=new Date();
+    public var playerPowerCount:Int=0;//the playerPowerCount and enemyPowerCount varaibles track how many powerups the player and enemy have accumluated, respectively.
+    public var enemyPowerCount:Int=0;//each is allowed up to two powers at a time, but no more.
+    public var ball2Counter:Int=0;
+    public var date:Date=new Date();
 	////var parts:Particles;
 	//var umCount:Int=0;
 	//var mainRef:ArkPongMain=ArkPongMain ArkPongMain();
 	//public var xLocations:Array<Dynamic>=ArkPongMain Array();
-	var invisiBrick:InvisiBrick;
+    public var invisiBrick:InvisiBrick;
 
     //power abilities in the UI
     @:isVar var abilityFire_Player(get, null):Button;
@@ -162,6 +163,18 @@ class ArkPongMain extends MovieClip{
     }
     public function getPlayerPower():String{
         return power;
+    }
+    public function setPlayerPower(power:String){
+        this.power = power;
+    }
+    public function isReset():Bool{
+        return mv_bReset;
+    }
+    public function setReset(isReset:Bool){
+        mv_bReset = isReset;
+    }
+    public function isPaused():Bool{
+        return mv_bPaused;
     }
     public function get_abilityFire_Player():Button {
         return abilityFire_Player;
@@ -364,7 +377,7 @@ class ArkPongMain extends MovieClip{
 		//evilSight.width=12;
 		//evilSight.height=226;
 		//evilSight.rotation=0;
-		///isReset=false;
+		///mv_bReset=false;
 		//ball.bricksDestroyed=0;///I think this being AFTER ball.doomCount=0 is responsible for the overlapping levels every now and then.
 		//need a degen level method in Bricks to destroy old level-- the old level is definitely staying because paddles are inc/dec in
 		//width by more than 5 after makeLvl called multiple times.  Blocks are laying over each other and multiple ones are dying at once.
@@ -479,7 +492,7 @@ class ArkPongMain extends MovieClip{
 	
 	public function pausePlay(event:MouseEvent){
 		//trace("timeOn:" + bricks.timeOn);
-		if(!isPaused){
+		if(!mv_bPaused){
 			/*
 			*You actually can(try to)force GC in AIR apps it turns out
 			*without using any unspported hacks
@@ -536,7 +549,7 @@ class ArkPongMain extends MovieClip{
 				//trace("" + this.getChildAt(i));
 			//}
 			Mouse.show();
-			isPaused=true;
+			mv_bPaused=true;
 			}
 		}
 		
@@ -554,7 +567,7 @@ class ArkPongMain extends MovieClip{
 	}
 	
 	public function unpausePlay(event:MouseEvent){
-		if(isPaused){
+		if(mv_bPaused){
 			Mouse.hide();
 			myMenuUI.getResumeButton().removeEventListener(MouseEvent.CLICK, unpausePlay);
 			myMenuUI.getResetButton().removeEventListener(MouseEvent.CLICK, unpausePlay);
@@ -593,11 +606,11 @@ class ArkPongMain extends MovieClip{
 					bricks.shortTimer.start();//this could be where Bug #4 comes from... see how bricks.timeOn is handled...3/4/2011
 				}
 			}
-			//isPaused=false;
+			//mv_bPaused=false;
 			//trace("" + event.currentTarget + " " + event.target + " " + event.relatedObject);
 			if(event.currentTarget.text=="Reset"){
-				if(myPowerCount>0){
-					isReset=true;
+				if(this.playerPowerCount>0){
+					mv_bReset=true;
 				}
                 //TODO: make these x,y values be relative to stage size. Ex. x value of half stage width minus half ball width and y value of halfway between closest layer of bricks and
                 //bottom or top of stage depending on player or enemy control minus ball height
@@ -619,7 +632,7 @@ class ArkPongMain extends MovieClip{
 				bricks.gnuRemakeLvl(event);//ArkPongMain way
 				//bricks.remakeLvl(event);//old way
 			}
-			isPaused=false;
+			mv_bPaused=false;
 		}
 	}
 	
@@ -659,7 +672,7 @@ class ArkPongMain extends MovieClip{
 	public function resetCheck(event:Event){
 		//trace("checking for reset");
 		//if(this.getChildByName("ball")!=null){
-			//trace("isReset:" + isReset);
+			//trace("mv_bReset:" + mv_bReset);
 			//trace("ball children:" + ball.getChildAt(ball.numChildren - 1));
 			if(mv_rMainBall.doomCount==1){
 				//reset();

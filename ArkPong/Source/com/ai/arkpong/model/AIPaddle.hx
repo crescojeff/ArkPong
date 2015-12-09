@@ -26,7 +26,7 @@ class AIPaddle extends ArkPongMovieClip{
 	public var intents:Array<Dynamic>=new Array();// 0 means he wants to avoid it, 1 means it is a normal priority target, 2 means it is a high priority target, and 3 means it is an emergency priority target
 	var color:String;
 	var sightedAt:Array<Dynamic>;
-	var brickLocations:Array<Dynamic>=new Array(new Array(), new Array(), new Array());//the evilPaddle CPU should be aware of all brick locations.  Evilsight sweeping is a clumsy implementation of AI in this case.
+	var brickLocations:Array<Array<Int>>=[new Array<Int>(), new Array<Int>(), new Array<Int>()];//the evilPaddle CPU should be aware of all brick locations.  Evilsight sweeping is a clumsy implementation of AI in this case.
 			//in Bricks class, we'll use something along the line os ePaddle.brickLocations[0].push(x)and ePaddle.brickLocations[1].push(y)to set x and y values respectively.
 	
 	//var xLocations:Array<Dynamic>=ArkPongMain Array(1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3);
