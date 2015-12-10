@@ -26,17 +26,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="haxelib|/usr/lib/haxelib/lime/2,4,4">
-        <CLASSES>
-          <root url="file:///usr/lib/haxelib/lime/2,4,4" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file:///usr/lib/haxelib/lime/2,4,4" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="haxelib|/usr/lib/haxelib/haxeui/1,7,20">
         <CLASSES>
           <root url="file:///usr/lib/haxelib/haxeui/1,7,20" />

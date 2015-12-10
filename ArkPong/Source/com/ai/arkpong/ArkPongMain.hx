@@ -48,11 +48,9 @@ package com.ai.arkpong;
 import com.ai.arkpong.view.FlyingNinja;
 import com.ai.arkpong.view.PauseMenu;
 import com.ai.arkpong.view.ArkPongMovieClip;
-import com.ai.arkpong.view.ArkPongMovieClip;
 import com.ai.arkpong.model.AIPaddle;
 import com.ai.arkpong.control.TemporaryBall;
 import com.ai.arkpong.model.InvisiBrick;
-import com.ai.arkpong.control.Bricks;
 import com.ai.arkpong.control.Bricks;
 import com.ai.arkpong.model.Paddle;
 import com.ai.arkpong.control.PrimaryBall;
@@ -216,8 +214,30 @@ class ArkPongMain extends MovieClip{
     }
 
 
+	//application entrypoint
+    //TODO: replace boilerplate with real app UI
+	public static function main() {
+		Macros.addStyleSheet("styles/gradient/gradient.css");
+		Toolkit.init();
+		Toolkit.openFullscreen(function(root:Root) {
+			var button:Button = new Button();
+			button.text = "Click Me!";
+			button.x = 100;
+			button.y = 100;
+            button.addEventListener(UIEvent.CLICK,
+            function(e:UIEvent) {
+				e.component.text = "You clicked me!";
+            });
+			root.addChild(button);
+            //var testMC:ArkPongMovieClip;
+            //root.addChild(testMC);//this seems to pass compilation, but it's hard to tell with all the other compile errors... haxe.ui may be more trouble than its worth when I only need a couple text fields and buttons
+            //TODO: apparently SpriteContainer can take openfl.display.Sprite objects, and Sprite is apparently a subclass of openfl's DisplayObjectContainer so it can work as our bridge between openfl and haxe.ui...
+		});
+	}
+
 
 	public function new(){
+        super();
 		//trace("anything?");
 		//stage.align=StageAlign.TOP_LEFT;
 		stage.scaleMode=StageScaleMode.EXACT_FIT;

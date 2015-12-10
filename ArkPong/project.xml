@@ -3,7 +3,11 @@
 	
 	<meta title="ArkPong" package="com.crescogames.arkpong" version="1.0.0" company="CresCo Games" />
 	<app main="com.ai.arkpong.ArkPongMain" path="Export" file="ArkPong" />
-	
+
+	<window background="#FFFFFF" fps="60" />
+	<window width="800" height="600" unless="mobile" />
+	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+
 	<source path="Source" />
 	
 	<haxelib name="openfl" />

@@ -241,6 +241,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/redbrick.jpg", AssetType.IMAGE);
 		className.set ("assets/Snort.png", __ASSET__assets_snort_png);
 		type.set ("assets/Snort.png", AssetType.IMAGE);
+		className.set ("assets/styles/gradient/gradient.css", __ASSET__assets_styles_gradient_gradient_css);
+		type.set ("assets/styles/gradient/gradient.css", AssetType.TEXT);
 		className.set ("assets/wood_wavy_BG.jpg", __ASSET__assets_wood_wavy_bg_jpg);
 		type.set ("assets/wood_wavy_BG.jpg", AssetType.IMAGE);
 		
@@ -640,6 +642,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/styles/gradient/gradient.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		id = "assets/wood_wavy_BG.jpg";
 		path.set (id, id);
 		
@@ -732,6 +738,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__fonts_oxygen_ttf);
+		
 		
 		
 		
@@ -1056,6 +1063,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/Snort.png", __ASSET__assets_snort_png);
 		type.set ("assets/Snort.png", AssetType.IMAGE);
+		
+		className.set ("assets/styles/gradient/gradient.css", __ASSET__assets_styles_gradient_gradient_css);
+		type.set ("assets/styles/gradient/gradient.css", AssetType.TEXT);
 		
 		className.set ("assets/wood_wavy_BG.jpg", __ASSET__assets_wood_wavy_bg_jpg);
 		type.set ("assets/wood_wavy_BG.jpg", AssetType.IMAGE);
@@ -1758,6 +1768,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_powersplit_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_redbrick_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_snort_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_styles_gradient_gradient_css extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_wood_wavy_bg_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 
 
@@ -1838,6 +1849,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:keep #if display private #end class __ASSET__fonts_oxygen_ttf extends lime.text.Font { public function new () { super (); name = "Oxygen Regular"; } } 
+
 
 
 
@@ -1969,6 +1981,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("Assets/powerSplit.png") #if display private #end class __ASSET__assets_powersplit_png extends lime.graphics.Image {}
 @:image("Assets/redbrick.jpg") #if display private #end class __ASSET__assets_redbrick_jpg extends lime.graphics.Image {}
 @:image("Assets/Snort.png") #if display private #end class __ASSET__assets_snort_png extends lime.graphics.Image {}
+@:file("Assets/styles/gradient/gradient.css") #if display private #end class __ASSET__assets_styles_gradient_gradient_css extends lime.utils.ByteArray {}
 @:image("Assets/wood_wavy_BG.jpg") #if display private #end class __ASSET__assets_wood_wavy_bg_jpg extends lime.graphics.Image {}
 
 

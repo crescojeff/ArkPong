@@ -426,6 +426,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/styles/gradient/gradient.css");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/wood_wavy_BG.jpg");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -496,7 +500,7 @@ class ApplicationMain {
 			company: "CresCo Games",
 			depthBuffer: false,
 			file: "ArkPong",
-			fps: Std.int (30),
+			fps: Std.int (60),
 			fullscreen: false,
 			hardware: true,
 			height: Std.int (600),
